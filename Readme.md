@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Константин Федоров](https://up.htmlacademy.ru/htmlcss/34/user/2113893).
-* Наставник: 'Евгений Котов'(https://htmlacademy.ru/profile/id25083).
+* Наставник: [Евгений Котов](https://htmlacademy.ru/profile/id25083).
 
 ---
 
