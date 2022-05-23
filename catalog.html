@@ -45,13 +45,10 @@
         <h1 class="catalog-header-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
-            <button><img class="breadcrumbs-home-logo" src="#" href="index.html" alt="Лого домашней страницы"></button>
-          <!-- сначала сделал вот так:
-            <a class="breadcrumbs-link">
+            <a class="breadcrumbs-link" href="index.html">
               <span class="visually-hidden">Главная</span>
-              <img class="breadcrumbs-home-logo" src="#" href="index.html" alt="Лого домашней страницы">
+              <img class="breadcrumbs-home-logo" src="#" alt="Лого домашней страницы">
             </a>
-          затем переделал в кнопку-->
           </li>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link">Гостиницы</a>
@@ -130,21 +127,15 @@
           <option value="expensive">Сначала дорогие</option>
           <option value="popular">Сначала популярные</option>
         </select>
-        <button><img class="button-mapping selected" src="#" href="#" alt="Показать карточки"></button>
-        <!-- разметка из примера, не разумею как будет удачней:
           <a class="button-mapping selected" href="#">
             <span class="visually-hidden">Показать карточки</span>
-          </a> -->
-          <button><img class="button-mapping" src="#" href="#" alt="Показать слайды"></button>
-        <!-- разметка из примера:
+          </a>
           <a class="button-mapping" href="#">
             <span class="visually-hidden">Показать слайды</span>
-          </a> -->
-          <button><img class="button-mapping" src="#" href="#" alt="Показать список"></button>
-        <!-- разметка из примера:
+          </a>
           <a class="button-mapping" href="#" >
             <span class="visually-hidden">Показать список</span>
-          </a> -->
+          </a>
 
         <ul class="hotels-list">
           <li class="hotel-card">
@@ -156,7 +147,7 @@
             <span class="hotel-price">От 4000 ₽</span>
             <a class="button hotel-details" href="#">Подробнее</a>
             <button class="button hotel-favourites" type="button" name="favourites">В избранное</button>
-            <!-- разметка в виде ссылки:
+            <!-- сделал кнопку, т.к. добавление в избранное не подразумевает перехода, на всякий случай разметка в виде ссылки:
               <a class="button hotel-favourites" href="#">В избранное</a>
              -->
             <img class="4-star-hotel" src="#" alt="4 звезды">
@@ -249,8 +240,8 @@
         <h2 class="page-footer-title-catalog">Подпишитесь на рассылку</h2>
         <p class="page-footer-text-catalog">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label for="newsletter-email">Email</label>
-          <input class="newsletter-field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required autocomplete>
+          <label for="newsletter-email visually-hidden">Email</label>
+          <input class="newsletter-field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required autocomplete="on">
           <button class="button newsletter-button" type="submit">
             <span class="visually-hidden">Отправить</span>
           </button>
@@ -278,7 +269,7 @@
         </ul>
       </section>
 
-      <section class="footer-phone" href="tel: +78128121212">+7 (812) 812-12-12</section>
+      <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       <a class="htmlacademy-link" href="https://htmlacademy.ru/">
         <img class="htmlacademy-logo" alt="Логотип htmlacademy" src="#">
       </a>
