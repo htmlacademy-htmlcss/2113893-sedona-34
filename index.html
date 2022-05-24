@@ -12,7 +12,7 @@
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-selected" href="#">Главная</a>
+            <a class="navigation-link navigation-link-selected" href="">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="about-sedona.html">О седоне</a>
@@ -31,6 +31,7 @@
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Избранное</span>
+              <span class="navigation-favourites-counter">12</span>
             </a>
           </li>
           <li class="navigation-item">
@@ -106,8 +107,10 @@
         <h2 class="page-footer-title">Подпишитесь на рассылку</h2>
         <p class="page-footer-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label for="newsletter-email visually-hidden">Email</label>
-          <input class="newsletter-field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required autocomplete="on">
+          <label class="visually-hidden">
+            email
+            <input class="newsletter-field" placeholder="Ваш e-mail" type="email" name="newsletter-email" required autocomplete="on">
+          </label>
           <button class="button newsletter-button" type="submit">
             <span class="visually-hidden">Отправить</span>
           </button>
