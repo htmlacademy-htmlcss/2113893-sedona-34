@@ -492,7 +492,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  margin: 57px 111px 60px 72px; /* справа 191, но мешает*/
+  margin: 57px 101px 60px 72px; /* справа 191, но мешает*/
 }
 
 .select-control {
