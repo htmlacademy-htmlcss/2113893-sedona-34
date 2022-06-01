@@ -2,7 +2,7 @@
   font-family: "PT sans";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "PT sans";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/ptsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -18,7 +18,7 @@
   font-family: "PT sans";
   font-style: italic;
   font-weight: 400;
-  src: url("/fonts/ptsans-italic.woff2") format("woff2");
+  src: url("../fonts/ptsans-italic.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -26,7 +26,7 @@
   font-family: "PT sans";
   font-style: italic;
   font-weight: 700;
-  src: url("/fonts/ptsans-bolditalic.woff2") format("woff2");
+  src: url("../fonts/ptsans-bolditalic.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -42,8 +42,24 @@ body {
   font-family: "PT sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  background-color: #FFFFFF;
+  background: #FFFFFF;
   color: #242424;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .main-container {
@@ -54,47 +70,54 @@ body {
   display: none;
 }
 
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .Sedonal-logo-link {
   display: block;
+  margin-right: 30px;
 }
 
 .page-header {
   margin: 0 auto;
-  padding: 0 70px;
+  padding: 0;
   max-width: 1200px;
   height: 65px;
 }
 
-.navigation-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 0 0 30px;
-  padding: 0 62px 0 17px;
-  width: 390px;
-}
-
 .navigation {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+  margin: 0 237px 0 0;
+  padding: 0 0 0 17px;
+}
+
+.navigation-list:last-child {
+  margin-right: 62px; /* не работает, почему? */
 }
 
 .navigation-user {
   display: flex;
-  margin: 0;
-  padding: 24 0 0 12px;
-  width: 264px;
-  height: 66px;
-
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 0 auto;
+  padding: 0;
 }
 
 .navigation-item {
   display: block;
+  margin: 0 30px 0 0;
 }
 
 .navigation-link {
-  font-family: "PT sans", sans-serif;
+  font-family: inherit;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -103,28 +126,16 @@ body {
   text-decoration: none;
 }
 
-.button {
-  font-family: "PT sans", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 700;
-  text-align: center;
-  color: #000000;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
 .navigation-favourites-counter {
-  font-family: "PT sans", sans-serif;
+  font-family: inherit;
   font-size: 10px;
   line-height: 13px;
   font-weight: 700;
-  text-align: center;
-  color: #000000;
   vertical-align: super;
 }
 
-.navigation-user-button {
+.navigation-user-button { /* vertical alignment don't work */
+  display: block;
   background-color: #756157;
   border-radius: 4px;
   color: white;
@@ -132,44 +143,28 @@ body {
   height: 37px;
 }
 
-.page-container {
-  width: 1200px;
-  margin: 0 auto;
-}
-
 .Sedona-wellcome-block {
-  background-image: url(../images/index/background.jpg);
+  background-image: url(../images/index/wellcome-background.jpg);
+  background-color: #000000;
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.wellcome-logo-1 {
-  display: block;
-  margin: 0 auto;
-  padding-top: 51px;
-  padding-bottom: 11px;
-}
-
-.wellcome-logo-2 {
-  display: block;
-  margin: 0 auto;
-}
-
-.wellcome-logo-3 {
+.wellcome-logo {
   display: block;
   margin: 0 auto;
   padding-top: 53px;
   padding-bottom: 83px;
 }
 
-.slogan-advantages {
+.advantages-slogan {
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
-.index-slogan {
+.slogan {
   display: block;
   font-weight: 700;
   font-size: 30px;
@@ -272,8 +267,6 @@ body {
 }
 
 .advantages-title {
-  font-family: "PT sans", sans-serif;
-  font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
@@ -281,7 +274,7 @@ body {
   margin: 0;
 }
 
-.advantages-index {
+.advantages-counter {
   max-width: 230px;
   margin: 0;
 }
@@ -314,41 +307,32 @@ body {
 }
 
 .search-hotels-button-block {
-  display: block;
   padding-top: 56px;
   padding-bottom: 92px;
-  margin: 0 auto;
 }
 
-.search-hotels-button {
+.search-hotels-button { /*не работают размеры кнопки */
   width: 574px;
   height: 60px;
-  font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  color: white;
   background-color: #756157;
   border-radius: 4px;
-}
-
-.page-footer {
-  width: 1200px;
-  margin: 0 auto;
 
 }
 
 .newsletter {
-  display: block;
   text-align: center;
   background-image: url(../images/index/newsletter-background.jpg);
   color: white;
+  background-color: #000000;
   padding: 94px 0;
+  background-size: auto 100%;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .newsletter-title {
-  display: block;
-  font-weight: 700px;
   font-size: 30px;
   line-height: 36px;
   margin: 0;
@@ -356,7 +340,6 @@ body {
 }
 
 .newsletter-text {
-  display: block;
   font-size: 22px;
   line-height: 26px;
   padding-top: 29px;
@@ -369,6 +352,8 @@ body {
   width: 600px;
   height: 60px;
   border: none;
+  font-family: inherit;
+  
 }
 
 .newsletter-button {
@@ -381,6 +366,12 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
+}
+
+.page-footer {
+  width: 1200px;
+  margin: 0 auto;
+
 }
 
 .footer-contacts {
@@ -492,7 +483,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  margin: 57px 101px 60px 72px; /* справа 191, но мешает*/
+  margin: 57px 101px 60px 72px; /* справа 191, но мешает отображению в 1 строку, разобраться с отступами*/
 }
 
 .select-control {
