@@ -540,6 +540,7 @@ advantages-card-1-1 p, .advantages-card-1-2 p, .advantages-card-3 p, .advantages
 
 .hotels-list {
   list-style-type: none;
+  display: flex;
 }
 
 .hotel-card span {
