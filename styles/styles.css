@@ -353,7 +353,8 @@ img {
   height: 60px;
   border: none;
   font-family: inherit;
-  
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .newsletter-button {
