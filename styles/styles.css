@@ -52,14 +52,20 @@ img {
 }
 
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
-  text-align: center;
   color: white;
+  background-color: #756157;
   text-decoration: none;
   text-transform: uppercase;
+  border-radius: 4px;
+  border: none;
 }
 
 .main-container {
@@ -134,11 +140,7 @@ img {
   vertical-align: super;
 }
 
-.navigation-user-button { /* vertical alignment don't work */
-  display: block;
-  background-color: #756157;
-  border-radius: 4px;
-  color: white;
+.navigation-user-button {
   width: 160px;
   height: 37px;
 }
@@ -164,7 +166,7 @@ img {
   padding: 0;
 }
 
-.slogan {
+.slogan { /* change to h1 */
   display: block;
   font-weight: 700;
   font-size: 30px;
@@ -174,12 +176,13 @@ img {
   text-transform: uppercase;
 }
 
-.advantages-header {
+.advantages-header { /* change to p or span */
   display: block;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   padding-bottom: 90px;
+  color: #333333;
 }
 
 .advantages-row {
@@ -284,6 +287,10 @@ img {
   margin: 0;
 }
 
+advantages-card-1-1 p, .advantages-card-1-2 p, .advantages-card-3 p, .advantages-card-4 p {
+  color: #333333;
+}
+
 .search-hotels {
   text-align: center;
 }
@@ -304,21 +311,15 @@ img {
   line-height: 26px;
   margin: 0 auto;
   width: 592px;
+  color: #333333;
 }
 
-.search-hotels-button-block {
-  padding-top: 56px;
-  padding-bottom: 92px;
-}
-
-.search-hotels-button { /*не работают размеры кнопки */
+.search-hotels-button {
   width: 574px;
   height: 60px;
   font-size: 20px;
   line-height: 36px;
-  background-color: #756157;
-  border-radius: 4px;
-
+  margin: 56px auto 92px auto;
 }
 
 .newsletter {
@@ -351,22 +352,34 @@ img {
   border-radius: 10px 0px 0px 10px;
   width: 600px;
   height: 60px;
-  border: none;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  border: inherit;
+  padding: 0;
 }
 
-.newsletter-button {
+.newsletter-button { /* move button to field by positioning? */
+
   background-color: #82B3D3;
   border-radius: 0px 10px 10px 0px;
   width: 200px;
   height: 60px;
-  border: none;
-  color: white;
   font-size: 20px;
-  font-weight: 700;
   line-height: 36px;
+  padding: 0;
+
+}
+
+.newsletter-catalog {
+  display: block;
+  text-align: center;
+  padding: 94px 0;
+  background-repeat: no-repeat;
+}
+
+.newsletter-text-catalog {
+  color: #333333;
 }
 
 .page-footer {
@@ -392,13 +405,6 @@ img {
   color: black;
   font-size: 40px;
   line-height: 40px;
-}
-
-.newsletter-catalog {
-  display: block;
-  text-align: center;
-  padding: 94px 0;
-  background-repeat: no-repeat;
 }
 
 .catalog-header {
@@ -448,14 +454,16 @@ img {
 }
 
 .button-filters {
-  color: white;
+  width: 160px;
+  height: 48px;
   background-color: #82B3D3;
-  border: none;
-  border-radius: 4px;
+  padding: 0;
 }
 
 .button-transparent {
   background: transparent;
+  font-weight: 400;
+  text-transform: capitalize;
 }
 
 .catalog-filters-buttons {
@@ -495,12 +503,17 @@ img {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   margin-right: 81px;
-  font-family: "PT sans", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: #333333;
 }
 
 .button-mapping {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 50px;
   height: 50px;
   border: 2px solid #E5E5E5;
@@ -523,6 +536,45 @@ img {
 .button-mapping-image {
   display: block;
   margin: 0 auto;
+}
+
+.hotels-list {
+  list-style-type: none;
+}
+
+.hotel-card span {
+  color: #333333;
+}
+
+.hotel-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hotel-card-title {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.hotel-details {
+  width: 140px;
+  height: 37px;
+}
+
+.hotel-favourites {
+  width: 140px;
+  height: 37px;
+  background-color: #82B3D3;
+}
+
+.hotel-rating {
+  width: 140px;
+  height: 37px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  background-color: #F2F2F2;
+  color: #333333;
 }
 
 .pagination {
@@ -574,6 +626,7 @@ img {
   margin-right: 51px;
   width: 175px;
   height: 21px;
+  color: #333333;
 }
 
 .hotels-per-page-number {
@@ -583,11 +636,8 @@ img {
   align-self: center;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
-  font-size: 18px;
-  line-height: 21px;
   margin-left: 51px;
-}
-
-.hotels-list {
-  list-style-type: none;
+  font-size: inherit;
+  line-height: inherit;
+  color: #333333
 }
