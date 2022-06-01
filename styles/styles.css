@@ -2,7 +2,7 @@
   font-family: "PT sans";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "PT sans";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/ptsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -18,7 +18,7 @@
   font-family: "PT sans";
   font-style: italic;
   font-weight: 400;
-  src: url("/fonts/ptsans-italic.woff2") format("woff2");
+  src: url("../fonts/ptsans-italic.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -26,7 +26,7 @@
   font-family: "PT sans";
   font-style: italic;
   font-weight: 700;
-  src: url("/fonts/ptsans-bolditalic.woff2") format("woff2");
+  src: url("../fonts/ptsans-bolditalic.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -42,8 +42,30 @@ body {
   font-family: "PT sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  background-color: #FFFFFF;
+  background: #FFFFFF;
   color: #242424;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: white;
+  background-color: #756157;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: none;
 }
 
 .main-container {
@@ -54,47 +76,54 @@ body {
   display: none;
 }
 
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .Sedonal-logo-link {
   display: block;
+  margin-right: 30px;
 }
 
 .page-header {
   margin: 0 auto;
-  padding: 0 70px;
+  padding: 0;
   max-width: 1200px;
   height: 65px;
 }
 
-.navigation-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 0 0 30px;
-  padding: 0 62px 0 17px;
-  width: 390px;
-}
-
 .navigation {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+  margin: 0 237px 0 0;
+  padding: 0 0 0 17px;
+}
+
+.navigation-list:last-child {
+  margin-right: 62px; /* не работает, почему? */
 }
 
 .navigation-user {
   display: flex;
-  margin: 0;
-  padding: 24 0 0 12px;
-  width: 264px;
-  height: 66px;
-
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 0 auto;
+  padding: 0;
 }
 
 .navigation-item {
   display: block;
+  margin: 0 30px 0 0;
 }
 
 .navigation-link {
-  font-family: "PT sans", sans-serif;
+  font-family: inherit;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -103,73 +132,41 @@ body {
   text-decoration: none;
 }
 
-.button {
-  font-family: "PT sans", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 700;
-  text-align: center;
-  color: #000000;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
 .navigation-favourites-counter {
-  font-family: "PT sans", sans-serif;
+  font-family: inherit;
   font-size: 10px;
   line-height: 13px;
   font-weight: 700;
-  text-align: center;
-  color: #000000;
   vertical-align: super;
 }
 
 .navigation-user-button {
-  background-color: #756157;
-  border-radius: 4px;
-  color: white;
   width: 160px;
   height: 37px;
 }
 
-.page-container {
-  width: 1200px;
-  margin: 0 auto;
-}
-
 .Sedona-wellcome-block {
-  background-image: url("/Images/index/background.jpg");
+  background-image: url(../images/index/wellcome-background.jpg);
+  background-color: #000000;
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.wellcome-logo-1 {
-  display: block;
-  margin: 0 auto;
-  padding-top: 51px;
-  padding-bottom: 11px;
-}
-
-.wellcome-logo-2 {
-  display: block;
-  margin: 0 auto;
-}
-
-.wellcome-logo-3 {
+.wellcome-logo {
   display: block;
   margin: 0 auto;
   padding-top: 53px;
   padding-bottom: 83px;
 }
 
-.slogan-advantages {
+.advantages-slogan {
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
-.index-slogan {
+.slogan { /* change to h1 */
   display: block;
   font-weight: 700;
   font-size: 30px;
@@ -179,12 +176,13 @@ body {
   text-transform: uppercase;
 }
 
-.advantages-header {
+.advantages-header { /* change to p or span */
   display: block;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   padding-bottom: 90px;
+  color: #333333;
 }
 
 .advantages-row {
@@ -272,8 +270,6 @@ body {
 }
 
 .advantages-title {
-  font-family: "PT sans", sans-serif;
-  font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
@@ -281,7 +277,7 @@ body {
   margin: 0;
 }
 
-.advantages-index {
+.advantages-counter {
   max-width: 230px;
   margin: 0;
 }
@@ -289,6 +285,10 @@ body {
 .advantages-description {
   max-width: 230px;
   margin: 0;
+}
+
+advantages-card-1-1 p, .advantages-card-1-2 p, .advantages-card-3 p, .advantages-card-4 p {
+  color: #333333;
 }
 
 .search-hotels {
@@ -311,44 +311,29 @@ body {
   line-height: 26px;
   margin: 0 auto;
   width: 592px;
-}
-
-.search-hotels-button-block {
-  display: block;
-  padding-top: 56px;
-  padding-bottom: 92px;
-  margin: 0 auto;
+  color: #333333;
 }
 
 .search-hotels-button {
   width: 574px;
   height: 60px;
-  font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  color: white;
-  background-color: #756157;
-  border-radius: 4px;
-}
-
-.page-footer {
-  width: 1200px;
-  margin: 0 auto;
-
+  margin: 56px auto 92px auto;
 }
 
 .newsletter {
-  display: block;
   text-align: center;
-  background-image: url("/images/index/newsletter-background.jpg");
+  background-image: url(../images/index/newsletter-background.jpg);
   color: white;
+  background-color: #000000;
   padding: 94px 0;
+  background-size: auto 100%;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .newsletter-title {
-  display: block;
-  font-weight: 700px;
   font-size: 30px;
   line-height: 36px;
   margin: 0;
@@ -356,7 +341,6 @@ body {
 }
 
 .newsletter-text {
-  display: block;
   font-size: 22px;
   line-height: 26px;
   padding-top: 29px;
@@ -368,19 +352,40 @@ body {
   border-radius: 10px 0px 0px 10px;
   width: 600px;
   height: 60px;
-  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: inherit;
+  padding: 0;
 }
 
-.newsletter-button {
+.newsletter-button { /* move button to field by positioning? */
+
   background-color: #82B3D3;
   border-radius: 0px 10px 10px 0px;
   width: 200px;
   height: 60px;
-  border: none;
-  color: white;
   font-size: 20px;
-  font-weight: 700;
   line-height: 36px;
+  padding: 0;
+
+}
+
+.newsletter-catalog {
+  display: block;
+  text-align: center;
+  padding: 94px 0;
+  background-repeat: no-repeat;
+}
+
+.newsletter-text-catalog {
+  color: #333333;
+}
+
+.page-footer {
+  width: 1200px;
+  margin: 0 auto;
+
 }
 
 .footer-contacts {
@@ -402,15 +407,8 @@ body {
   line-height: 40px;
 }
 
-.newsletter-catalog {
-  display: block;
-  text-align: center;
-  padding: 94px 0;
-  background-repeat: no-repeat;
-}
-
 .catalog-header {
-  background-image: url(/images/catalog/catalog-background.jpg);
+  background-image: url(../images/catalog/catalog-background.jpg);
   background-position: center;
   background-repeat: no-repeat;
   color: white;
@@ -456,14 +454,16 @@ body {
 }
 
 .button-filters {
-  color: white;
+  width: 160px;
+  height: 48px;
   background-color: #82B3D3;
-  border: none;
-  border-radius: 4px;
+  padding: 0;
 }
 
 .button-transparent {
   background: transparent;
+  font-weight: 400;
+  text-transform: capitalize;
 }
 
 .catalog-filters-buttons {
@@ -492,7 +492,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  margin: 57px 111px 60px 72px; /* справа 191, но мешает*/
+  margin: 57px 101px 60px 72px; /* справа 191, но мешает отображению в 1 строку, разобраться с отступами*/
 }
 
 .select-control {
@@ -503,12 +503,17 @@ body {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   margin-right: 81px;
-  font-family: "PT sans", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: #333333;
 }
 
 .button-mapping {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 50px;
   height: 50px;
   border: 2px solid #E5E5E5;
@@ -531,6 +536,46 @@ body {
 .button-mapping-image {
   display: block;
   margin: 0 auto;
+}
+
+.hotels-list {
+  list-style-type: none;
+  display: flex;
+}
+
+.hotel-card span {
+  color: #333333;
+}
+
+.hotel-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hotel-card-title {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.hotel-details {
+  width: 140px;
+  height: 37px;
+}
+
+.hotel-favourites {
+  width: 140px;
+  height: 37px;
+  background-color: #82B3D3;
+}
+
+.hotel-rating {
+  width: 140px;
+  height: 37px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  background-color: #F2F2F2;
+  color: #333333;
 }
 
 .pagination {
@@ -582,6 +627,7 @@ body {
   margin-right: 51px;
   width: 175px;
   height: 21px;
+  color: #333333;
 }
 
 .hotels-per-page-number {
@@ -591,11 +637,8 @@ body {
   align-self: center;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
-  font-size: 18px;
-  line-height: 21px;
   margin-left: 51px;
-}
-
-.hotels-list {
-  list-style-type: none;
+  font-size: inherit;
+  line-height: inherit;
+  color: #333333
 }
