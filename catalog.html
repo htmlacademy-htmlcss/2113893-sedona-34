@@ -15,13 +15,13 @@
       </a>
       <ul class="navigation-list">
         <li class="navigation-item">
-          <a class="navigation-link navigation-link-selected" href="/index.html">Главная</a>
+          <a class="navigation-link" href="/index.html">Главная</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">О Cедоне</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="./catalog.html">Гостиницы</a>
+          <a class="navigation-link navigation-link-selected" href="./catalog.html">Гостиницы</a>
         </li>
       </ul>
       <ul class="navigation-user">
@@ -60,7 +60,7 @@
             </a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="index.html">
+            <a class="breadcrumbs-link" href="catalog.html">
               <img class="breadcrumbs-item-image" src="images/catalog/icon-arrow-right.svg" width="6" height="9"
                 alt="Иконка стрелки направо">
             </a>
@@ -168,19 +168,27 @@
                 alt="Звёздное небо между красных скал.">
               <h3 class="hotel-card-title">Amara Resort & Spa</h3>
             </a>
-            <span>Гостиница</span>
-            <span>От 4000 ₽</span>
-            <a class="button hotel-details" href="#">Подробнее</a>
-            <button class="button hotel-favourites" type="button" name="favourites">В избранное</button>
-            <!-- сделал кнопку, т.к. добавление в избранное не подразумевает перехода, на всякий случай разметка в виде ссылки:
+            <div class="hotel-card-details">
+            <div class="hotel-card-column">
+              <span>Гостиница</span>
+              <a class="button hotel-details" href="#">Подробнее</a>
+              <div class="hotel-card-stars">
+                <span class="visually-hidden">4 звезды</span>
+                <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
+                <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
+                <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
+                <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
+              </div>
+            </div>
+            <div class="hotel-card-column">
+              <span>От 4000 ₽</span>
+              <button class="button hotel-favourites" type="button" name="favourites">В избранное</button>
+              <!-- сделал кнопку, т.к. добавление в избранное не подразумевает перехода, на всякий случай разметка в виде ссылки:
               <a class="button hotel-favourites" href="#">В избранное</a>
-             -->
-            <span class="visually-hidden">4 звезды</span>
-            <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-            <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-            <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-            <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-            <a class="button hotel-rating">Рейтинг: 8,5</a>
+               -->
+              <a class="button hotel-rating">Рейтинг: 8,5</a>
+            </div>
+            </div>
           </li>
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
@@ -293,7 +301,7 @@
   </main>
 
   <footer class="page-footer">
-    <section class="footer-contacts">
+    <section class="footer-container">
       <div class="footer-social-list">
         <h2 class="visually-hidden">Ссылки на социальные сети</h2>
         <a class="footer-social-button" href="https://vk.com/htmlacademy" target="_blank">
