@@ -495,16 +495,20 @@ img {
 /* направляем контент в подвале, перенести в контейнер подвала? */
 .footer-container {
   display: flex;
-  justify-content: space-between;
+ /* justify-content: space-between; */
   align-items: center;
-  padding: 45px 72px 35px 72px;
+  padding: 45px 70px 35px 82px;
 }
 
 /* контейнер соц сетей */
 .footer-social-list {
   display: flex;
-  width: 116px;
-  justify-content: space-between;
+  flex-basis: 33%;
+}
+
+/* отступы для кнопок соц сетей */
+.footer-social-button:not(:last-child) {
+  margin-right: 27px;
 }
 
 /* номер телефона */
@@ -513,14 +517,13 @@ img {
   color: black;
   font-size: 40px;
   line-height: 40px;
+  flex-basis: 33%;
 }
 
 /* ссылка на разработчика сайта */
-.htmlacademy-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.htmlacademy-link {
+  flex-basis: 33%;
+  text-align: end;
 }
 
 /* фон для раздела с фильтрами */
