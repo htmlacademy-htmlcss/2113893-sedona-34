@@ -185,12 +185,13 @@ img {
 
 /* фоновое фото каньона */
 .Sedona-wellcome-block {
+  position: relative;
   background-image: url(../images/index/wellcome-background.jpg);
-  background-color: #000000; /*есть черная полоска сверху, варианты: убрать border-box, убрать черный фон */
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
   height: 485px;
+  /* добавить черный фон? */
 }
 
 /* надпись на фото с каньоном */
@@ -202,6 +203,17 @@ img {
   height: 485px;
 }
 
+
+.background-mask {
+  position: absolute;
+  background-image: url(../images/index/wellcome-background-mask.svg);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1200Px;
+  height: 57px;
+
+}
 
 .advantages-slogan {
   text-align: center;
@@ -602,16 +614,17 @@ img {
   text-transform: capitalize;
 }
 
-/* направляем кнопки в колонну */
+/* потребуется?
+/* направляем кнопки фильтров в колонну */
 .catalog-filters-buttons {
   display: flex;
   flex-direction: column;
 }
+/*
 
 /* перенести? */
 .catalog-filters-group-rightside {
   border: none;
-
 }
 
 /* перенести? */
@@ -704,31 +717,40 @@ img {
   padding: 20px;
   }
 
-/* темный шрифт для подробностей карточки */
-.hotel-card span {
-  color: #333333;
-}
-
 /* ссылка на гостиницу */
 .hotel-card-link {
   text-decoration: none;
   color: inherit;
 }
 
+.hotel-card-image {
+  margin-bottom: 16px;
+}
+
 /* название гостиинцы */
 .hotel-card-title {
   font-size: 24px;
   line-height: 28px;
+  margin: 0;
+  margin-bottom: 16px;
 }
 
-/* переделать в три гориз флекса */
-.hotel-card-details {
+.hotel-card-row {
   display: flex;
+  margin-bottom: 16px;
+  justify-content: space-between
 }
 
-.hotel-card-column {
-  display: flex;
-  flex-direction: column;
+/* темный шрифт для подробностей карточки */
+.hotel-type {
+  color: #333333;
+  width: 140px;
+
+}
+
+.hotel-price {
+  color: #333333;
+  width: 140px;
 }
 
 /* кнопка подробнее */
@@ -742,6 +764,11 @@ img {
   width: 140px;
   height: 37px;
   background-color: #82B3D3;
+}
+
+.hotel-card-stars {
+  width: 140px;
+
 }
 
 /* численный рейтинг отеля */
