@@ -8,11 +8,17 @@
 </head>
 
 <body>
+
+  <!-- Header -->
   <header class="page-header">
     <nav class="navigation">
+
+      <!-- Логотип Седоны -->
       <a class="Sedonal-logo-link" href="index.html">
         <img class="header-logo" src="images/header/logo.svg" width="139" height="70" alt="Логотип Гостиниц Sedona.">
       </a>
+
+      <!-- Навигация слева -->
       <ul class="navigation-list">
         <li class="navigation-item">
           <a class="navigation-link" href="index.html">Главная</a>
@@ -21,9 +27,11 @@
           <a class="navigation-link" href="#">О Cедоне</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link navigation-link-selected" href="./catalog.html">Гостиницы</a>
+          <a class="navigation-link navigation-link-current" href="./catalog.html">Гостиницы</a>
         </li>
       </ul>
+
+      <!-- Навигация справа -->
       <ul class="navigation-user">
         <li class="navigation-item">
           <a class="navigation-link" href="catalog.html">
@@ -47,11 +55,16 @@
     </nav>
   </header>
 
+  <!-- Main catalog -->
   <main class="main-container main-index">
     <div class="page-container">
+
+      <!-- Блок с фильтрами -->
       <header class="catalog-header">
         <h1 class="catalog-header-title">Гостиницы Седоны</h1>
-        <ul class="breadcrumbs">
+
+        <!-- Хлебные крошки -->
+        <ol class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">
               <span class="visually-hidden">Главная</span>
@@ -68,11 +81,15 @@
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link breadcrumbs-link-current" href="#">Гостиницы</a>
           </li>
-        </ul>
+        </ol>
+
+        <!-- Фильтры -->
         <section class="catalog-filters">
           <h2 class="visually-hidden">Фильтры для поиска</h2>
           <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="catalog-filters-group">
+
+            <!-- Инфраструктура -->
+            <fieldset class="catalog-filters-group catalog-filters-group-infrastructure">
               <legend class="catalog-filters-title">Инфраструктура:</legend>
               <ul class="catalog-filters-list">
                 <li class="catalog-filters-item">
@@ -95,6 +112,8 @@
                 </li>
               </ul>
             </fieldset>
+
+            <!-- Тип жилья -->
             <fieldset class="catalog-filters-group">
               <legend class="catalog-filters-title">Тип Жилья:</legend>
               <ul class="catalog-filters-list">
@@ -118,27 +137,30 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="catalog-filters-group-rightside">
+
+            <!-- Стоимость и кнопки применить, сбросить -->
+            <fieldset class="catalog-filters-group catalog-filters-group-price">
               <legend class="catalog-filters-title">Стоимость, ₽</legend>
-              <div class="price-container">
-                <input type="number" min="0" max="12000" value="0" name="price-min">
+              <div class="price-input-container">
+                <input class="price-input-min" type="number" min="0" max="12000" value="0" name="price-min">
                 <span class="price-container-text">от</span>
-              </div>
-              <div class="price-container">
-                <input type="number" min="0" max="12000" value="9000" name="price-max">
+                <input class="price-input-max" type="number" min="0" max="12000" value="9000" name="price-max">
                 <span class="price-container-text">до</span>
               </div>
-              <input type="range" id="price" name="price"> <!-- декоративная заглушка -->
+            <!--  <input type="range" id="price" name="price"> -->
             </fieldset>
             <div class="catalog-filters-buttons">
-              <button class="button button-filters" type="submit">Применить</button>
-              <button class="button button-filters button-transparent" type="reset">Сбросить</button>
+              <button class="button button-filters-apply" type="submit">Применить</button>
+              <button class="button button-filters button-filters-cancel" type="reset">Сбросить</button>
             </div>
           </form>
         </section>
       </header>
 
+      <!-- Каталог найденного -->
       <section class="catalog-main">
+
+        <!-- Сортировка и смена вида -->
         <div class="hotels-order-view">
           <span class="catalog-hotels-counter">Найдено гостиниц: 38</span>
           <select class="select-control" aria-label="Сортировка">
@@ -161,6 +183,7 @@
           </a>
         </div>
 
+        <!-- Список гостиниц -->
         <ul class="hotels-list">
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
@@ -190,6 +213,7 @@
                 </div>
                 <a class="button hotel-rating">Рейтинг: 8,5</a>
               </div>
+            </div>
           </li>
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
@@ -197,19 +221,29 @@
                 alt="Зелёные предгорья и жёлтая гора на фоне облаков и радуги.">
               <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
             </a>
-            <span>Гостиница</span>
-            <span>От 5000 ₽</span>
-            <a class="button hotel-details" href="#">Подробнее</a>
-            <button class="button hotel-favourites hotel-selected" type="button" name="favourites">В избранном</button>
-            <!-- разметка в виде ссылки:
-              <a class="button hotel-favourites hotel-selected" href="#">В избранном</a>
-             -->
-            <span class="visually-hidden">4 звезды</span>
-            <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-            <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-            <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-            <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-            <a class="button hotel-rating">Рейтинг: 9,2</a>
+            <div class="hotel-card-details">
+              <div class="hotel-card-row">
+                <div class="hotel-type">Гостиница</div>
+                <div class="hotel-price">От 5000 ₽</div>
+              </div>
+              <div class="hotel-card-row">
+                <a class="button hotel-details" href="#">Подробнее</a>
+                <button class="button hotel-favourites button hotel-favourites-checked" type="button" name="favourites">В избранном</button>
+                <!-- сделал кнопку, т.к. добавление в избранное не подразумевает перехода, на всякий случай разметка в виде ссылки:
+              <a class="button hotel-favourites" href="#">В избранное</a>
+               -->
+              </div>
+              <div class="hotel-card-row">
+                <div class="hotel-card-stars">
+                  <span class="visually-hidden">4 звезды</span>
+                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
+                </div>
+                <a class="button hotel-rating">Рейтинг: 9,2</a>
+              </div>
+            </div>
           </li>
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
@@ -217,18 +251,28 @@
                 alt="Оранжевая гора на фоне синего неба.">
               <h3 class="hotel-card-title">Desert Quail Inn</h3>
             </a>
-            <span>Гостиница</span>
-            <span>От 2500 ₽</span>
-            <a class="button hotel-details" href="#">Подробнее</a>
-            <button class="button hotel-favourites" type="button" name="favourites">В избранное</button>
-            <!-- разметка в виде ссылки:
+            <div class="hotel-card-details">
+              <div class="hotel-card-row">
+                <div class="hotel-type">Гостиница</div>
+                <div class="hotel-price">От 2500 ₽</div>
+              </div>
+              <div class="hotel-card-row">
+                <a class="button hotel-details" href="#">Подробнее</a>
+                <button class="button hotel-favourites" type="button" name="favourites">В избранное</button>
+                <!-- сделал кнопку, т.к. добавление в избранное не подразумевает перехода, на всякий случай разметка в виде ссылки:
               <a class="button hotel-favourites" href="#">В избранное</a>
-             -->
-            <span class="visually-hidden">3 звезды</span>
-            <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-            <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-            <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-            <a class="button hotel-rating">Рейтинг: 6,9</a>
+               -->
+              </div>
+              <div class="hotel-card-row">
+                <div class="hotel-card-stars">
+                  <span class="visually-hidden">3 звезды</span>
+                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
+                </div>
+                <a class="button hotel-rating">Рейтинг: 6,9</a>
+              </div>
+            </div>
           </li>
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
@@ -236,20 +280,30 @@
                 alt="Красная гора на фоне звёздного неба">
               <h3 class="hotel-card-title">GreenTree Inn</h3>
             </a>
-            <span>Гостиница</span>
-            <span>От 1500 ₽</span>
-            <a class="button hotel-details" href="#">Подробнее</a>
-            <button class="button hotel-favourites" type="button" name="favourites">В избранное</button>
-            <!-- разметка в виде ссылки:
+            <div class="hotel-card-details">
+              <div class="hotel-card-row">
+                <div class="hotel-type">Гостиница</div>
+                <div class="hotel-price">От 1500 ₽</div>
+              </div>
+              <div class="hotel-card-row">
+                <a class="button hotel-details" href="#">Подробнее</a>
+                <button class="button hotel-favourites" type="button" name="favourites">В избранное</button>
+                <!-- сделал кнопку, т.к. добавление в избранное не подразумевает перехода, на всякий случай разметка в виде ссылки:
               <a class="button hotel-favourites" href="#">В избранное</a>
-             -->
-            <span class="visually-hidden">2 звезды</span>
-            <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-            <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-            <a class="button hotel-rating" href="#">Рейтинг: 5,0</a>
-          </li>
+               -->
+              </div>
+              <div class="hotel-card-row">
+                <div class="hotel-card-stars">
+                  <span class="visually-hidden">2 звезды</span>
+                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
+                </div>
+                <a class="button hotel-rating">Рейтинг: 5,0</a>
+              </div>
+            </div>
         </ul>
 
+        <!-- Пагинация -->
         <div class="pagination">
           <ul class="pagination-list">
             <li class="pagination-item pagination-item-selected">
@@ -274,7 +328,7 @@
               <a class="pagination-link" href="#">10</a>
             </li>
           </ul>
-          <span class="hotels-per-page-text">Гостиниц на странице:</span>
+          <p class="hotels-per-page-text">Гостиниц на странице:</p>
           <select class="hotels-per-page-number" name="hotels-per-page">
             <option value="4">4</option>
             <option value="8">8</option>
@@ -284,6 +338,7 @@
         </div>
       </section>
 
+      <!-- Subscribe catalog-->
       <section class="newsletter-catalog">
         <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
         <p class="newsletter-text-catalog">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
@@ -301,27 +356,33 @@
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="page-footer">
     <section class="footer-container">
-      <div class="footer-social-list">
+
+      <!-- Соц сети -->
+      <div class="footer-social-container">
         <h2 class="visually-hidden">Ссылки на социальные сети</h2>
         <a class="footer-social-button" href="https://vk.com/htmlacademy" target="_blank">
-          <img class="footer-social-img" src="images/footer/vk.svg" width="24" height="15" alt="Логотип ВКонтакте">
+          <img class="footer-social-img" src="images/footer/vk.svg" width="24" height="15" alt="Логотип ВКонтакте.">
           <span class="visually-hidden">ВКонтакте</span>
         </a>
         <a class="footer-social-button" href="https://t.me/htmlacademy" target="_blank">
-          <img class="footer-social-img" src="images/footer/telegram.svg" width="18" height="16" alt="Логотип Телеграм">
+          <img class="footer-social-img" src="images/footer/telegram.svg" width="18" height="16" alt="Логотип Телеграм.">
           <span class="visually-hidden">Телеграм</span>
         </a>
         <a class="footer-social-button" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
-          <img class="footer-social-img" src="images/footer/youtube.svg" width="22" height="17" alt="Логотип Ютьюб">
+          <img class="footer-social-img" src="images/footer/youtube.svg" width="22" height="17" alt="Логотип Ютьюб.">
           <span class="visually-hidden">Ютьюб</span>
         </a>
       </div>
+
+      <!-- контактный номер телефона -->
       <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+
+      <!-- Ссылка на академию -->
       <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-        <img class="htmlacademy-logo" src="images/footer/html-academy.svg" width="115" height="33"
-          alt="Логотип htmlacademy.">
+        <img class="htmlacademy-logo" src="images/footer/html-academy.svg" width="115" height="33" alt="Логотип htmlacademy.">
       </a>
     </section>
   </footer>
