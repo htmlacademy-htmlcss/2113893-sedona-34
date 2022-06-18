@@ -8,6 +8,7 @@
 </head>
 
 <body>
+  <div class="border-container">
 
   <!-- Header -->
   <header class="page-header">
@@ -15,7 +16,7 @@
 
       <!-- Логотип Седоны -->
       <a class="Sedonal-logo-link" href="index.html">
-        <img class="header-logo" src="images/header/logo.svg" width="139" height="70" alt="Логотип Гостиниц Sedona.">
+        <img class="Sedona-logo" src="images/header/logo.svg" width="139" height="70" alt="Логотип Гостиниц Sedona.">
       </a>
 
       <!-- Навигация слева -->
@@ -24,7 +25,7 @@
           <a class="navigation-link" href="index.html">Главная</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="#">О Cедоне</a>
+          <a class="navigation-link" href="index.html#about-Sedona">О Cедоне</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link navigation-link-current" href="./catalog.html">Гостиницы</a>
@@ -86,9 +87,9 @@
         <!-- Фильтры -->
         <section class="catalog-filters">
           <h2 class="visually-hidden">Фильтры для поиска</h2>
-          <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="form-catalog-filters" action="https://echo.htmlacademy.ru/" method="get">
 
-            <!-- Инфраструктура -->
+            <!-- Фильтр инфраструктура -->
             <fieldset class="catalog-filters-group catalog-filters-group-infrastructure">
               <legend class="catalog-filters-title">Инфраструктура:</legend>
               <ul class="catalog-filters-list">
@@ -113,7 +114,7 @@
               </ul>
             </fieldset>
 
-            <!-- Тип жилья -->
+            <!-- Фильтр тип жилья -->
             <fieldset class="catalog-filters-group">
               <legend class="catalog-filters-title">Тип Жилья:</legend>
               <ul class="catalog-filters-list">
@@ -143,9 +144,9 @@
               <legend class="catalog-filters-title">Стоимость, ₽</legend>
               <div class="price-input-container">
                 <input class="price-input-min" type="number" min="0" max="12000" value="0" name="price-min">
-                <span class="price-container-text">от</span>
+                <!-- мешает грид сетке, будет заменён псевдоэлемнтом <span class="price-container-text">от</span> -->
                 <input class="price-input-max" type="number" min="0" max="12000" value="9000" name="price-max">
-                <span class="price-container-text">до</span>
+                <!-- мешает грид сетке, будет заменён псевдоэлемнтом <span class="price-container-text">до</span> -->
               </div>
             <!--  <input type="range" id="price" name="price"> -->
             </fieldset>
@@ -381,11 +382,14 @@
       <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
 
       <!-- Ссылка на академию -->
-      <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-        <img class="htmlacademy-logo" src="images/footer/html-academy.svg" width="115" height="33" alt="Логотип htmlacademy.">
-      </a>
+      <div class="htmlacademy-link-container">
+        <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+          <img class="htmlacademy-logo" src="images/footer/html-academy.svg" width="115" height="33" alt="Логотип htmlacademy.">
+        </a>
+      </div>
     </section>
   </footer>
+  </div>
 </body>
 
 </html>
