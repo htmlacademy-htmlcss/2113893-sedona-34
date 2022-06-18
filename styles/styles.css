@@ -159,7 +159,6 @@ img {
   margin: 0;
   padding: 0;
   list-style-type: none;
-
 }
 
 /* элемент навигации справа */
@@ -241,6 +240,10 @@ img {
   line-height: 36px;
   text-transform: uppercase;
   margin: 0;
+}
+
+.advantages {
+  margin: 0 auto;
 }
 
 /* текст после заголовка, перед карточками */
@@ -441,6 +444,7 @@ img {
 
 /* раздел рассылки  */
 .newsletter {
+  margin: 0 auto;
   text-align: center;
   padding: 94px 0;
   background-image: url(../images/index/newsletter-background.jpg);
@@ -514,6 +518,7 @@ img {
 
 /* направляем контент в подвале, перенести в контейнер подвала? */
 .footer-container {
+  margin: 0 auto;
   display: flex;
   align-items: center;
   padding: 45px 70px 35px 80px;
