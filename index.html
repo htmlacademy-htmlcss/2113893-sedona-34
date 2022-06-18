@@ -8,14 +8,15 @@
 </head>
 
 <body>
+  <div class="border-container">
 
   <!-- Header -->
   <header class="page-header">
     <nav class="navigation">
 
       <!-- Логотип Седоны -->
-      <a class="Sedonal-logo-link" href="index.html">
-        <img class="header-logo" src="images/header/logo.svg" width="139" height="70" alt="Логотип Гостиниц Sedona.">
+      <a class="Sedona-logo-link" href="index.html">
+        <img class="Sedona-logo" src="images/header/logo.svg" width="139" height="70" alt="Логотип Гостиниц Sedona.">
       </a>
 
       <!-- Навигация слева -->
@@ -24,7 +25,7 @@
           <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="#">О Cедоне</a>
+          <a class="navigation-link" href="#about-Sedona">О Cедоне</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="catalog.html">Гостиницы</a>
@@ -54,7 +55,7 @@
   </header>
 
   <!-- Main -->
-  <main class="main-container">
+  <main>
 
       <!-- Блок приветствия -->
       <section class="Sedona-wellcome-block">
@@ -73,6 +74,7 @@
       <!-- Список преимуществ -->
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества Седоны</h2>
+        <a id="about-Sedona"></a>
         <ol class="advantages-list">
           <li class="advantages-row">
             <div class="advantages-card-1">
@@ -157,7 +159,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="page-footer">
+  <footer>
     <section class="footer-container">
 
       <!-- Соц сети -->
@@ -181,12 +183,14 @@
       <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
 
       <!-- Ссылка на академию -->
-      <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-        <img class="htmlacademy-logo" src="images/footer/html-academy.svg" width="115" height="33"
-          alt="Логотип htmlacademy.">
-      </a>
+      <div class="htmlacademy-link-container">
+        <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+          <img class="htmlacademy-logo" src="images/footer/html-academy.svg" width="115" height="33" alt="Логотип htmlacademy.">
+        </a>
+      </div>
     </section>
   </footer>
+  </div>
 </body>
 
 </html>
