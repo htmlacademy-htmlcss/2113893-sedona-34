@@ -84,6 +84,86 @@ img {
   text-transform: uppercase;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
+}
+
+/* наведение курсора */
+.button:hover {
+  background-color: #615048;
+}
+
+/* фокусирование через таб */
+.button:focus {
+  background-color: #615048;
+}
+
+/* нажатие */
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* неактивно */
+.button:disabled {
+  background-color: #E5E5E5;
+}
+
+/*кнопка 2-го типа, синяя */
+/* наведение курсора */
+.button-2:hover {
+  background-color: #68A2CA;
+}
+
+/* фокусирование через таб */
+.button-2:focus {
+  background-color: #68A2CA;
+}
+
+/* нажатие */
+.button-2:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* неактивно */
+.button-2:disabled {
+  background-color: #E5E5E5;
+}
+
+/*кнопка 3-го типа, зелёная */
+/* наведение курсора */
+.button-3:hover {
+  background-color: #6C9E42;
+}
+
+/* фокусирование через таб */
+.button-3:focus {
+  background-color: #6C9E42;
+}
+
+/* нажатие */
+.button-3:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* неактивно */
+.button-3:disabled {
+  background-color: #E5E5E5;
+}
+
+/* кнопка 4-го типа, прозрачная */
+/* наведение курсора */
+.button-4:hover {
+  background-color: transparent;
+}
+
+/* фокусирование через таб */
+.button-4:focus {
+  background-color: transparent;
+}
+
+/* нажатие */
+.button-4:active {
+  opacity: 30%;
+  background-color: transparent;
 }
 
 /* скрытие невидимых элементов */
@@ -127,6 +207,21 @@ img {
   position: relative;
 }
 
+/* наведение курсора */
+.Sedona-logo:hover {
+  opacity: 70%;
+}
+
+/* фокусирование через таб */
+.Sedona-logo:focus {
+  opacity: 70%;
+}
+
+/* нажатие */
+.Sedona-logo:active {
+  opacity: 30%;
+}
+
 /* навигация по сайту (левая часть) */
 .navigation-list {
   display: flex;
@@ -140,6 +235,7 @@ img {
 
 /* элемент навигации слева */
 .navigation-link {
+  position: relative;
   display: block;
   padding: 18px;
   font-family: inherit;
@@ -149,6 +245,33 @@ img {
   text-align: center;
   color: #000000;
   text-decoration: none;
+}
+
+/* наведение курсора */
+.navigation-link:hover {
+  color: #756157;
+}
+
+/* фокусирование через таб */
+.navigation-link:focus {
+  color: #756157;
+}
+
+/* нажатие */
+.navigation-link:active {
+  color: #7561574D;
+  opacity: 30%;
+}
+
+/* выделение текущего раздела навигации */
+.navigation-link-current::before {
+  position: absolute;
+  content: "";
+  right: 18px;
+  left: 18px;
+  bottom: 0;
+  background-color: #756257;
+  height: 2px;
 }
 
 /* меню пользователя и кнопка (справа) */
@@ -168,20 +291,56 @@ img {
   padding: 18px 0;
 }
 
-/* счётчик избранного */
+/* центрируем иконки в кнопках навигации */
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
+
+/* наведение курсора */
+.navigation-icon:hover {
+  fill: #756157;
+}
+
+/* фокусирование через таб */
+.navigation-icon:focus {
+  fill: #756157;
+}
+
+/* нажатие */
+.navigation-icon:active {
+  fill: #7561574D;
+  opacity: 30%;
+}
+
+/* для псевдоэлемента счётчика избранного, может лишний, есть ли способ избавиться? */
 .navigation-favourites-counter {
+  position: relative;
+}
+
+/* счётчик избранного */
+.navigation-favourites-counter::after {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #7DB54F;
+  content: "12";
   font-family: inherit;
   font-size: 10px;
   line-height: 13px;
   color: white;
   font-weight: 400;
-  vertical-align: super;
-  background-color: #7DB54F;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  padding: 2px;
-  margin-left: -12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  left: 24px;
 }
 
 /* размеры кнопки справа и отступ от иконок меню пользователя */
@@ -189,11 +348,6 @@ img {
   width: 160px;
   height: 37px;
   margin-left: 20px;
-}
-
-/* выделение текущего раздела навигации */
-.navigation-link-current {
-  border-bottom: 2px solid #756257;
 }
 
 /* фоновое фото каньона */
@@ -526,6 +680,7 @@ img {
 
 /* контейнер соц сетей */
 .footer-social-container {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-basis: 33.3333%;
@@ -541,6 +696,28 @@ img {
   text-align: center;
 }
 
+/* позиционируем иконку академии в контейнере */
+.footer-social-icon {
+  position: absolute;
+  fill: #83B3D3;
+}
+
+/* наведение курсора */
+.footer-social-icon:hover {
+  fill: #68A2CA;
+}
+
+/* фокусирование через таб */
+.footer-social-icon:focus {
+  fill: #68A2CA;
+}
+
+/* нажатие */
+.footer-social-icon:active {
+  fill: #68A2CA4D;
+  opacity: 30%;
+}
+
 /* номер телефона */
 .footer-phone {
   text-decoration: none;
@@ -550,16 +727,56 @@ img {
   flex-basis: 33.3333%;
 }
 
-/* контейнер с ссылкой на разработчика сайта */
-.htmlacademy-link-container {
-  flex-basis: 33.3333%;
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+/* наведение курсора */
+.footer-phone:hover {
+  color: #756157;
 }
 
-/* фон для раздела с фильтрами */
+/* фокусирование через таб */
+.footer-phone:focus {
+  color: #756157;
+}
+
+/* нажатие */
+.footer-phone:active {
+  color: #7561574D;
+  opacity: 30%;
+}
+
+/* контейнер с ссылкой на разработчика сайта */
+.htmlacademy-link-container {
+  position: relative;
+  flex-basis: 33.3333%;
+}
+
+/* позиционируем иконку академии в контейнере */
+.htmlacademy-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 0 auto auto;
+  fill: #000000;
+}
+
+/* наведение курсора */
+.htmlacademy-icon:hover {
+  fill: #756157;
+}
+
+/* фокусирование через таб */
+.htmlacademy-icon:focus {
+  fill: #756157;
+}
+
+/* нажатие */
+.htmlacademy-icon:active {
+  fill: #7561574D;
+  opacity: 30%;
+}
+
+/* фон для раздела с фильтрами в каталоге */
 .catalog-header {
   background-image: url(../images/catalog/catalog-background.jpg);
   background-position: center;
@@ -567,7 +784,6 @@ img {
   color: white;
   padding: 35px 70px 70px 70px;
   min-height: 404px;
-
 }
 
 /* заголовок раздела фильтры */
@@ -581,22 +797,52 @@ img {
 /* хлебные крошки */
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   font-size: 16px;
   margin: 0;
   margin-top: 10px;
 }
 
+/* ставим по центру хлебные крошки */
+.breadcrumbs-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 /* текущая страница в крошках */
-.breadcrumbs-link-current {
+.breadcrumbs-link {
   color: white;
   text-decoration: none;
+}
+
+.breadcrumbs-icon-arrow {
+  fill: white;
+  margin-right: 10px;
 }
 
 /* отступы в крошках */
 .breadcrumbs-item:not(:last-child) {
   margin-right: 10px;
 }
+
+/* наведение курсора */
+.breadcrumbs-link:hover {
+  opacity: 60%;
+}
+
+/* фокусирование через таб */
+.breadcrumbs-link:focus {
+  opacity: 60%;
+}
+
+/* нажатие */
+.breadcrumbs-link:active {
+  opacity: 30%;
+}
+
 
 /* направляем фильтры в ряд, перенести? */
 .form-catalog-filters {
@@ -674,13 +920,6 @@ padding: 0;
   /* margin-left: 13px; */
 }
 
-/* мешает грид сетке, будет заменён псевдоэлемнтом
-.price-container-text {
-  opacity: 30%;
-  margin-left: -40px;
-}
- */
-
 /* направляем кнопки фильтров в колонну */
 .catalog-filters-buttons {
   margin-left: 70px;
@@ -715,7 +954,7 @@ padding: 0;
 }
 
 /* позиционируем кнопки смены вида карточек гостиниц в ряд */
-.hotels-order-view {
+.sorting-container {
   display: flex;
 }
 
@@ -748,7 +987,7 @@ padding: 0;
 }
 
 /* кнопки отображения карточек гостиниц */
-.button-mapping {
+.button-sorting {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -760,18 +999,33 @@ padding: 0;
   align-self: center;
 }
 
+/* Ннведение */
+.button-sorting:hover {
+  border-color: black;
+}
+
+/* фокус */
+.button-sorting:focus {
+  border-color: #68A2CA;
+}
+
+/* нажатие */
+.button-sorting:active {
+  border-color: black;
+}
+
 /* кнопка текущего отображение гостиниц */
-.button-mapping-selected{
+.button-sorting-selected{
   border-color: black;
 }
 
 /* переделать */
-.button-mapping:not(:last-child) {
+.button-sorting:not(:last-child) {
   margin-right: 10px;
 }
 
 /* центрируем иконки смена вида карточек */
-.button-mapping-image {
+.button-sorting-image {
   display: block;
   margin: 0 auto;
 }
@@ -799,6 +1053,23 @@ padding: 0;
   text-decoration: none;
   color: inherit;
 }
+
+/* наведение курсора */
+.hotel-card-link:hover {
+  color: #756157;
+}
+
+/* фокусирование через таб */
+.hotel-card-link:focus {
+  color: #756157;
+}
+
+/* нажатие */
+.hotel-card-link:active {
+  color: #7561574D;
+  opacity: 30%;
+}
+
 
 /* отступ между фото отеля и названием */
 .hotel-card-image {
@@ -915,6 +1186,7 @@ padding: 0;
   align-items: center;
   justify-content: center;
   text-align: center;
+  border-radius: 4px;
 }
 
 /* текущая страница в пагинации */
@@ -929,7 +1201,6 @@ padding: 0;
 
 /* гостиниц на странице */
 .hotels-per-page-text {
-
   margin: 0;
 }
 

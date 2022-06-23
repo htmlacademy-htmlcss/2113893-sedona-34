@@ -15,7 +15,7 @@
     <nav class="navigation">
 
       <!-- Логотип Седоны -->
-      <a class="Sedonal-logo-link" href="index.html">
+      <a class="Sedona-logo-link" href="index.html">
         <img class="Sedona-logo" src="images/header/logo.svg" width="139" height="70" alt="Логотип Гостиниц Sedona.">
       </a>
 
@@ -37,16 +37,17 @@
         <li class="navigation-item">
           <a class="navigation-link" href="catalog.html">
             <span class="visually-hidden">Поиск</span>
-            <img class="navigation-user-icons" src="images/header/search.svg" width="19" height="19"
-              alt="Логотип поиска.">
+            <svg class="navigation-icon" aria-hidden="true" focusable="false" width="19" height="19" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="m 18.16 17.05 l -3.71 -3.7 c 1 -1.3 1.7 -3 1.7 -4.9 c 0 -4.4 -3.6 -8 -8.02 -8 a 8.12 8.12 0 0 0 -8.02 8.1 c 0 4.4 3.6 8 8.02 8 c 1.8 0 3.51 -0.6 4.91 -1.7 l 3.71 3.7 l 1.4 -1.5 Z m -10.03 -2.5 c -3.3 0 -6.02 -2.7 -6.02 -6 a 6.03 6.03 0 0 1 12.04 0 c 0 3.3 -2.71 6 -6.02 6 Z"/>
+            </svg>
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="#">
+          <a class="navigation-link navigation-favourites-counter" href="#">
             <span class="visually-hidden">Избранное</span>
-            <img class="navigation-user-icons" src="images/header/favorite.svg" width="19" height="17"
-              alt="Логотип избранного.">
-            <span class="navigation-favourites-counter">12</span>
+            <svg class="navigation-icon" aria-hidden="true" focusable="false" width="19" height="17" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M 9.58 17 c -0.3 0 -0.6 -0.1 -0.8 -0.4 c -5.42 -6.1 -6.72 -7.5 -7.03 -7.9 A 5.4 5.4 0 0 1 6.16 0 c 1.31 0 2.51 0.5 3.52 1.3 a 5.47 5.47 0 0 1 9.03 4.1 c 0 1.3 -0.5 2.5 -1.31 3.4 l -7.02 7.9 c -0.2 0.2 -0.4 0.3 -0.8 0.3 Z M 3.56 7.5 c 0.3 0.4 3.51 4 6.12 6.9 l 6.21 -7 c 0.5 -0.5 0.7 -1.2 0.7 -2 c 0 -1.8 -1.5 -3.3 -3.3 -3.3 c -1 0 -2 0.5 -2.71 1.3 c -0.3 0.3 -0.6 0.4 -0.9 0.4 c -0.3 0 -0.6 -0.2 -0.8 -0.4 a 3.7 3.7 0 0 0 -2.71 -1.3 c -1.8 0 -3.31 1.5 -3.31 3.3 c -0.1 0.9 0.3 1.6 0.7 2.1 c -0.1 0 -0.1 0 0 0 Z"/>
+            </svg>
           </a>
         </li>
         <li class="navigation-item">
@@ -69,18 +70,15 @@
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">
               <span class="visually-hidden">Главная</span>
-              <img class="breadcrumbs-item-image" src="images/catalog/icon-breadcrumbs-home.svg" width="13" height="13"
+              <img class="breadcrumbs-icon-home" src="images/catalog/icon-breadcrumbs-home.svg" width="13" height="13"
                 alt="Иконка домашней страницы">
             </a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="catalog.html">
-              <img class="breadcrumbs-item-image" src="images/catalog/icon-arrow-right.svg" width="6" height="9"
-                alt="Иконка стрелки направо">
-            </a>
-          </li>
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link breadcrumbs-link-current" href="#">Гостиницы</a>
+            <svg class="breadcrumbs-icon-arrow" aria-hidden="true" focusable="false" width="6" height="8" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M 4.89 3.58 L 1.09 0.18 c -0.2 -0.2 -0.6 -0.2 -0.9 0 c -0.3 0.2 -0.2 0.6 0 0.8 l 3.3 3 l -3.2 3 c -0.2 0.2 -0.2 0.6 0 0.8 c 0 0.1 0.3 0.2 0.4 0.2 c 0.1 0 0.3 -0.1 0.4 -0.2 l 3.8 -3.4 c 0.3 -0.2 0.3 -0.6 0 -0.8 Z"/>
+            </svg>
+            <a class="breadcrumbs-link" href="./catalog.html">Гостиницы</a>
           </li>
         </ol>
 
@@ -144,15 +142,13 @@
               <legend class="catalog-filters-title">Стоимость, ₽</legend>
               <div class="price-input-container">
                 <input class="price-input-min" type="number" min="0" max="12000" value="0" name="price-min">
-                <!-- мешает грид сетке, будет заменён псевдоэлемнтом <span class="price-container-text">от</span> -->
                 <input class="price-input-max" type="number" min="0" max="12000" value="9000" name="price-max">
-                <!-- мешает грид сетке, будет заменён псевдоэлемнтом <span class="price-container-text">до</span> -->
               </div>
             <!--  <input type="range" id="price" name="price"> -->
             </fieldset>
             <div class="catalog-filters-buttons">
-              <button class="button button-filters-apply" type="submit">Применить</button>
-              <button class="button button-filters button-filters-cancel" type="reset">Сбросить</button>
+              <button class="button button-filters-apply button-2" type="submit">Применить</button>
+              <button class="button button-filters button-filters-cancel button-4" type="reset">Сбросить</button>
             </div>
           </form>
         </section>
@@ -162,25 +158,25 @@
       <section class="catalog-main">
 
         <!-- Сортировка и смена вида -->
-        <div class="hotels-order-view">
+        <div class="sorting-container">
           <span class="catalog-hotels-counter">Найдено гостиниц: 38</span>
           <select class="select-control" aria-label="Сортировка">
             <option value="cheap">Сначала дешёвые</option>
             <option value="expensive">Сначала дорогие</option>
             <option value="popular">Сначала популярные</option>
           </select>
-          <a class="button-mapping button-mapping-selected" href="#">
+          <a class="button-sorting button-sorting-selected button-sorting-table" href="#">
             <span class="visually-hidden">Показать карточки</span>
-            <img class="button-mapping-image" src="images/catalog/icon-table-view.svg" width="16" height="14" alt="">
+            <img class="button-sorting-image" src="images/catalog/icon-sorting-table.svg" width="16" height="14" alt="">
           </a>
-          <a class="button-mapping button-mapping-slide" href="#">
+          <a class="button-sorting button-sorting-slide" href="#">
             <span class="visually-hidden">Показать слайды</span>
-            <img class="button-mapping-image" src="images/catalog/icon-slideshow-view.svg" width="16" height="14"
+            <img class="button-sorting-image" src="images/catalog/icon-sorting-slideshow.svg" width="16" height="14"
               alt="">
           </a>
-          <a class="button-mapping button-mapping-list" href="#">
+          <a class="button-sorting button-sorting-list" href="#">
             <span class="visually-hidden">Показать список</span>
-            <img class="button-mapping-image" src="images/catalog/icon-list-view.svg" width="16" height="14" alt="">
+            <img class="button-sorting-image" src="images/catalog/icon-sorting-list.svg" width="16" height="14" alt="">
           </a>
         </div>
 
@@ -199,20 +195,17 @@
               </div>
               <div class="hotel-card-row">
                 <a class="button hotel-details" href="#">Подробнее</a>
-                <button class="button hotel-favourites" type="button" name="favourites">В избранное</button>
-                <!-- сделал кнопку, т.к. добавление в избранное не подразумевает перехода, на всякий случай разметка в виде ссылки:
-              <a class="button hotel-favourites" href="#">В избранное</a>
-               -->
+                <button class="button hotel-favourites button-2" type="button" name="favourites">В избранное</button>
               </div>
               <div class="hotel-card-row">
                 <div class="hotel-card-stars">
                   <span class="visually-hidden">4 звезды</span>
-                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/icon-star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/icon-star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/icon-star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/icon-star.svg" width="18" height="17" alt="">
                 </div>
-                <a class="button hotel-rating">Рейтинг: 8,5</a>
+                <a class="button hotel-rating button-4">Рейтинг: 8,5</a>
               </div>
             </div>
           </li>
@@ -229,20 +222,17 @@
               </div>
               <div class="hotel-card-row">
                 <a class="button hotel-details" href="#">Подробнее</a>
-                <button class="button hotel-favourites button hotel-favourites-checked" type="button" name="favourites">В избранном</button>
-                <!-- сделал кнопку, т.к. добавление в избранное не подразумевает перехода, на всякий случай разметка в виде ссылки:
-              <a class="button hotel-favourites" href="#">В избранное</a>
-               -->
+                <button class="button hotel-favourites hotel-favourites-checked button-3" type="button" name="favourites">В избранном</button>
               </div>
               <div class="hotel-card-row">
                 <div class="hotel-card-stars">
                   <span class="visually-hidden">4 звезды</span>
-                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/icon-star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/icon-star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/icon-star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/icon-star.svg" width="18" height="17" alt="">
                 </div>
-                <a class="button hotel-rating">Рейтинг: 9,2</a>
+                <a class="button hotel-rating button-4">Рейтинг: 9,2</a>
               </div>
             </div>
           </li>
@@ -259,19 +249,16 @@
               </div>
               <div class="hotel-card-row">
                 <a class="button hotel-details" href="#">Подробнее</a>
-                <button class="button hotel-favourites" type="button" name="favourites">В избранное</button>
-                <!-- сделал кнопку, т.к. добавление в избранное не подразумевает перехода, на всякий случай разметка в виде ссылки:
-              <a class="button hotel-favourites" href="#">В избранное</a>
-               -->
+                <button class="button hotel-favourites button-2" type="button" name="favourites">В избранное</button>
               </div>
               <div class="hotel-card-row">
                 <div class="hotel-card-stars">
                   <span class="visually-hidden">3 звезды</span>
-                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/icon-star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/icon-star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/icon-star.svg" width="18" height="17" alt="">
                 </div>
-                <a class="button hotel-rating">Рейтинг: 6,9</a>
+                <a class="button hotel-rating button-4">Рейтинг: 6,9</a>
               </div>
             </div>
           </li>
@@ -288,18 +275,15 @@
               </div>
               <div class="hotel-card-row">
                 <a class="button hotel-details" href="#">Подробнее</a>
-                <button class="button hotel-favourites" type="button" name="favourites">В избранное</button>
-                <!-- сделал кнопку, т.к. добавление в избранное не подразумевает перехода, на всякий случай разметка в виде ссылки:
-              <a class="button hotel-favourites" href="#">В избранное</a>
-               -->
+                <button class="button hotel-favourites button-2" type="button" name="favourites">В избранное</button>
               </div>
               <div class="hotel-card-row">
                 <div class="hotel-card-stars">
                   <span class="visually-hidden">2 звезды</span>
-                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
-                  <img class="hotel-stars" src="images/catalog/star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/icon-star.svg" width="18" height="17" alt="">
+                  <img class="hotel-stars" src="images/catalog/icon-star.svg" width="18" height="17" alt="">
                 </div>
-                <a class="button hotel-rating">Рейтинг: 5,0</a>
+                <a class="button hotel-rating button-4">Рейтинг: 5,0</a>
               </div>
             </div>
         </ul>
@@ -311,22 +295,22 @@
               <a class="pagination-link pagination-link-selected">1</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">2</a>
+              <a class="pagination-link button-2" href="#">2</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">2</a>
+              <a class="pagination-link button-2" href="#">2</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">3</a>
+              <a class="pagination-link button-2" href="#">3</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">4</a>
+              <a class="pagination-link button-2" href="#">4</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">...</a>
+              <a class="pagination-link button-2" href="#">...</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">10</a>
+              <a class="pagination-link button-2" href="#">10</a>
             </li>
           </ul>
           <p class="hotels-per-page-text">Гостиниц на странице:</p>
@@ -349,7 +333,7 @@
             <input class="newsletter-field" placeholder="Ваш e-mail" type="email" name="newsletter-email" required
               autocomplete="on">
           </label>
-          <button class="button newsletter-button" type="submit">
+          <button class="button newsletter-button button-2" type="submit">
             <span>Подписаться</span>
           </button>
         </form>
@@ -358,22 +342,28 @@
   </main>
 
   <!-- Footer -->
-  <footer class="page-footer">
+  <footer>
     <section class="footer-container">
 
       <!-- Соц сети -->
       <div class="footer-social-container">
         <h2 class="visually-hidden">Ссылки на социальные сети</h2>
         <a class="footer-social-button" href="https://vk.com/htmlacademy" target="_blank">
-          <img class="footer-social-img" src="images/footer/vk.svg" width="24" height="15" alt="Логотип ВКонтакте.">
+          <svg class="footer-social-icon" aria-hidden="true" focusable="false" width="24" height="15" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M 24.12 0.95 c 0.16 -0.55 0 -0.95 -0.8 -0.95 H 20.7 c -0.67 0 -0.98 0.35 -1.15 0.73 c 0 0 -1.33 3.2 -3.22 5.27 c -0.61 0.6 -0.9 0.8 -1.23 0.8 c -0.16 0 -0.41 -0.2 -0.41 -0.74 V 0.95 c 0 -0.66 -0.19 -0.95 -0.74 -0.95 H 9.82 c -0.42 0 -0.67 0.3 -0.67 0.6 c 0 0.61 0.95 0.76 1.04 2.5 v 3.8 c 0 0.84 -0.15 0.99 -0.48 0.99 c -0.9 0 -3.06 -3.21 -4.34 -6.89 c -0.25 -0.71 -0.5 -1 -1.18 -1 H 1.57 c -0.75 0 -0.9 0.35 -0.9 0.73 c 0 0.68 0.89 4.07 4.14 8.55 c 2.17 3.06 5.23 4.72 8 4.72 c 1.68 0 1.88 -0.37 1.88 -1 v -2.32 c 0 -0.73 0.16 -0.88 0.7 -0.88 c 0.38 0 1.05 0.2 2.6 1.67 c 1.79 1.75 2.08 2.53 3.08 2.53 h 2.63 c 0.75 0 1.12 -0.37 0.9 -1.1 c -0.23 -0.72 -1.08 -1.77 -2.2 -3.02 c -0.62 -0.7 -1.54 -1.47 -1.82 -1.86 c -0.39 -0.49 -0.28 -0.7 0 -1.14 c 0 0 3.2 -4.43 3.54 -5.93 Z"/>
+          </svg>
           <span class="visually-hidden">ВКонтакте</span>
         </a>
         <a class="footer-social-button" href="https://t.me/htmlacademy" target="_blank">
-          <img class="footer-social-img" src="images/footer/telegram.svg" width="18" height="16" alt="Логотип Телеграм.">
+          <svg class="footer-social-icon" aria-hidden="true" focusable="false" width="18" height="17" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M 16.79 0.1 L 0.84 6.25 c -1.09 0.43 -1.08 1.04 -0.2 1.31 l 4.1 1.28 l 9.47 -5.98 c 0.44 -0.27 0.85 -0.12 0.52 0.18 L 7.05 9.96 l -0.28 4.22 c 0.41 0 0.6 -0.19 0.83 -0.41 l 1.99 -1.93 l 4.13 3.05 c 0.77 0.42 1.31 0.2 1.5 -0.7 l 2.72 -12.8 c 0.28 -1.12 -0.43 -1.62 -1.16 -1.3 Z"/>
+          </svg>
           <span class="visually-hidden">Телеграм</span>
         </a>
         <a class="footer-social-button" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
-          <img class="footer-social-img" src="images/footer/youtube.svg" width="22" height="17" alt="Логотип Ютьюб.">
+          <svg class="footer-social-icon" aria-hidden="true" focusable="false" width="22" height="17" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M 18.94 0.5 H 3.51 C 1.65 0.5 0.33 2.1 0.33 3.9 V 14 c 0 1.9 1.32 3.5 3.18 3.5 h 15.65 c 1.64 0 3.17 -1.6 3.17 -3.4 V 3.9 C 22.11 2.1 20.8 0.5 18.94 0.5 Z M 7.99 13.04 V 4.96 L 15.33 9 l -7.34 4.04 Z"/>
+          </svg>
           <span class="visually-hidden">Ютьюб</span>
         </a>
       </div>
@@ -383,8 +373,10 @@
 
       <!-- Ссылка на академию -->
       <div class="htmlacademy-link-container">
-        <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-          <img class="htmlacademy-logo" src="images/footer/html-academy.svg" width="115" height="33" alt="Логотип htmlacademy.">
+        <a class="htmlacademy-link" href="https://htmlacademy.ru/" target="_blank">
+          <svg class="htmlacademy-icon" aria-hidden="true" focusable="false" width="115" height="33" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M 0 12.9 v 2.6 h 2.5 v -2.6 H 0 Z M 11.6 4.5 c -1.6 0 -2.8 0.7 -3.6 1.7 h -0.1 V 0 h -2 v 15.5 h 2 v -5.3 c 0 -2.1 1.3 -3.6 3.3 -3.6 c 1.8 0 2.9 1.4 2.9 3.2 v 5.7 h 2 V 9.4 c 0.1 -3 -1.8 -4.9 -4.5 -4.9 Z M 26.6 4.8 h -4.8 V 1.1 h -2 v 3.8 h -1.9 v 2 h 1.9 v 6 c 0 1.7 1 2.7 2.7 2.7 h 4.1 v -2 h -3.7 c -0.7 0 -1.1 -0.4 -1.1 -1.1 V 6.8 h 4.8 v -2 Z M 41.1 4.6 c -1.6 0 -2.9 0.8 -3.5 2.1 h -0.1 c -0.6 -1.2 -1.8 -2.1 -3.4 -2.1 c -1.4 0 -2.5 0.8 -3.1 1.8 h -0.1 V 4.8 H 29 v 10.6 h 2 V 10 c 0 -2 1 -3.5 2.6 -3.5 c 1.5 0 2.4 1 2.4 2.6 v 6.3 h 2 V 9.8 c 0 -2.4 1.4 -3.3 2.6 -3.3 c 1.5 0 2.4 1 2.4 2.6 v 6.3 h 2 V 8.9 c 0.1 -2.5 -1.4 -4.3 -3.9 -4.3 Z M 47.8 12.7 c 0 1.7 1 2.7 2.8 2.7 h 2 v -2 h -1.7 c -0.7 0 -1.1 -0.4 -1.1 -1.1 V 0 h -2 v 12.7 Z M 28.9 19.7 c -0.9 -1.1 -2.2 -1.8 -3.9 -1.8 c -3.1 0 -5.4 2.3 -5.4 5.6 s 2.3 5.6 5.4 5.6 c 1.8 0 3 -0.8 3.8 -1.9 h 0.1 v 1.6 h 2 V 18.2 h -2 v 1.5 Z m -3.6 7.4 c -2.2 0 -3.6 -1.6 -3.6 -3.6 s 1.4 -3.6 3.6 -3.6 s 3.6 1.6 3.6 3.6 c 0 1.9 -1.4 3.6 -3.6 3.6 Z M 44.2 22 c -0.5 -2.4 -2.6 -4.1 -5.4 -4.1 a 5.4 5.4 0 0 0 -5.6 5.6 c 0 3.1 2.2 5.6 5.6 5.6 c 2.8 0 4.9 -1.8 5.4 -4.2 h -2.1 a 3.4 3.4 0 0 1 -3.3 2.3 c -2.2 0 -3.6 -1.6 -3.6 -3.6 s 1.4 -3.6 3.6 -3.6 c 1.6 0 2.8 1 3.3 2.2 h 2.1 V 22 Z M 55.1 19.7 c -0.9 -1.1 -2.2 -1.8 -3.9 -1.8 c -3.1 0 -5.4 2.3 -5.4 5.6 s 2.3 5.6 5.4 5.6 c 1.8 0 3 -0.8 3.8 -1.9 h 0.1 v 1.6 h 2 V 18.2 h -2 v 1.5 Z m -3.6 7.4 c -2.2 0 -3.6 -1.6 -3.6 -3.6 s 1.4 -3.6 3.6 -3.6 s 3.6 1.6 3.6 3.6 c 0 1.9 -1.5 3.6 -3.6 3.6 Z M 68.7 19.8 c -0.9 -1.1 -2.2 -1.9 -3.9 -1.9 c -3.1 0 -5.4 2.3 -5.4 5.6 s 2.2 5.6 5.4 5.6 c 1.7 0 3 -0.8 3.8 -1.8 h 0.1 v 1.5 h 2 V 13.4 h -2 v 6.4 Z m -3.6 7.3 c -2.2 0 -3.6 -1.6 -3.6 -3.6 s 1.4 -3.6 3.6 -3.6 s 3.6 1.6 3.6 3.6 c -0.1 2 -1.5 3.6 -3.6 3.6 Z M 78.3 17.9 c -3.3 0 -5.5 2.5 -5.5 5.6 c 0 3 2.1 5.6 5.5 5.6 c 2.5 0 4.5 -1.3 5.2 -3.6 h -2.1 c -0.5 1 -1.6 1.6 -3 1.6 c -1.9 0 -3.3 -1.3 -3.4 -2.9 h 8.8 c 0.2 -3.6 -2 -6.3 -5.5 -6.3 Z m 0 1.9 c 1.7 0 3 1 3.3 2.6 h -6.5 c 0.3 -1.5 1.5 -2.6 3.2 -2.6 Z M 98.2 17.9 c -1.6 0 -2.9 0.8 -3.6 2 h -0.1 c -0.6 -1.2 -1.8 -2 -3.4 -2 c -1.4 0 -2.5 0.7 -3.1 1.8 v -1.5 h -1.9 v 10.6 h 2 v -5.4 c 0 -2 1 -3.4 2.6 -3.5 c 1.5 0 2.4 1 2.4 2.6 v 6.3 h 2 v -5.6 c 0 -2.4 1.4 -3.3 2.6 -3.3 c 1.5 0 2.4 1 2.4 2.6 v 6.3 h 2 v -6.5 c 0.1 -2.6 -1.4 -4.4 -3.9 -4.4 Z M 109.4 27 l -3.6 -8.9 h -2.2 l 4.8 11.6 c -0.3 0.9 -0.7 1.2 -1.7 1.2 h -2.5 v 2 h 2.5 c 1.8 0 2.8 -0.8 3.5 -2.6 l 4.7 -12.2 h -2.1 l -3.4 8.9 Z"/>
+          </svg>
         </a>
       </div>
     </section>
