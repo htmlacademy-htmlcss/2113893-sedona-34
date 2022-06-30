@@ -789,9 +789,9 @@ img {
 }
 
 /*скрыть модальное окно */
-.modal-container-close {
+/* .modal-container-close {
    display: none;
-}
+} */
 
 /* центрируем окно, красим фон и указываем отступы */
 .modal {
@@ -1029,11 +1029,6 @@ img {
   border: none;
   cursor: pointer;
   background: transparent;
-}
-
-/*скрыть окно */
-.display-none {
-   display: none;
 }
 
 /* ошибка даты, заезд */
