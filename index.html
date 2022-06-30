@@ -202,6 +202,76 @@
     </section>
   </footer>
   </div>
-</body>
 
+  <!-- модальное окно -->
+  <div class="modal-container modal-container-close">
+    <div class="modal modal-search">
+      <button class="modal-close-button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="modal-label label-arrival" for="date-arrival">Дата заезда:</label>
+          <input class="modal-field field-arrival" type="text" id="date-arrival" name="date-arrival" placeholder="27 апреля 2020" min="2022-06-26" required>
+          <button class="button-icon modal-button-calendar-arrival">
+            <svg class="modal-icon" aria-hidden="true" focusable="false" width="15" height="15" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 10c.3 0 .5-.2.5-.5S5.8 9 5.5 9s-.5.2-.5.5.2.5.5.5Z"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h13c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h13v7ZM1 6V3h2v2h1V3h7v2h1V3h2v3H1Z"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 10c.3 0 .5-.2.5-.5S7.8 9 7.5 9s-.5.2-.5.5.2.5.5.5ZM9.5 10c.3 0 .5-.2.5-.5S9.8 9 9.5 9s-.5.2-.5.5.2.5.5.5ZM5.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5ZM3.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM7.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM9.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM11.5 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM11.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"/>
+            </svg>
+          </button>
+          <span class="date-error-arrival">Мы не можем отправить вас в прошлое.</span>
+          <label class="modal-label label-departure" for="date-departure">Дата выезда:</label>
+          <input class="modal-field field-departure" type="text" id="date-departure" name="date-departure" placeholder="1 сентября 2021" min="2021-06-26" required>
+          <button class="button-icon modal-button-calendar-departure">
+            <svg class="modal-icon" aria-hidden="true" focusable="false" width="15" height="15" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 10c.3 0 .5-.2.5-.5S5.8 9 5.5 9s-.5.2-.5.5.2.5.5.5Z"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h13c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h13v7ZM1 6V3h2v2h1V3h7v2h1V3h2v3H1Z"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 10c.3 0 .5-.2.5-.5S7.8 9 7.5 9s-.5.2-.5.5.2.5.5.5ZM9.5 10c.3 0 .5-.2.5-.5S9.8 9 9.5 9s-.5.2-.5.5.2.5.5.5ZM5.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5ZM3.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM7.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM9.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM11.5 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM11.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"/>
+            </svg>
+          </button>
+          <span class="rooms-available-dearture">На эти даты есть свободные номера. Пока есть.</span>
+          <label class="modal-label label-adults" for="guests-adults">Взрослые:</label>
+          <button class="button-icon modal-button-minus-adults">
+            <svg class="modal-icon" aria-hidden="true" focusable="false" width="13" height="1" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v1h13V0H0Z"/>
+            </svg>
+          </button>
+          <input class="modal-field field-adults" type="number" id="guests-adults" name="guests-adults" placeholder="2" min="1" max="99">
+          <button class="button-icon modal-button-plus-adults">
+            <svg class="modal-icon" aria-hidden="true" focusable="false" width="13" height="13" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
+            </svg>
+          </button>
+            <label class="modal-label label-kids modal-label-icon" for="guests-kids">Дети:
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                  <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+                    <circle xmlns="http://www.w3.org/2000/svg" cx="12.5" cy="12.5" r="12.5" fill="currentColor"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 17h1v-6h-1v6ZM13 8h-1v1h1V8Z" fill="#fff"/>
+                  </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
+            </label>
+          <button class="button-icon modal-button-minus-kids">
+            <svg class="modal-icon" aria-hidden="true" focusable="false" width="13" height="1" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v1h13V0H0Z"/>
+            </svg>
+          </button>
+          <input class="modal-field field-kids" type="number" id="guests-kids" name="guests-kids" placeholder="1" min="0" max="99">
+          <button class="button-icon modal-button-plus-kids">
+            <svg class="modal-icon" aria-hidden="true" focusable="false" width="13" height="13" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
+            </svg>
+          </button>
+          <button class="button modal-button" type="submit">
+            <span class="modal-button-text">Найти</span>
+          </button>
+        </form>
+      </section>
+    </div>
+  </div>
+</body>
 </html>
