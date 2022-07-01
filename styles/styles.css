@@ -208,17 +208,17 @@ img {
 }
 
 /* наведение курсора */
-.Sedona-logo:hover {
+.Sedona-logo-link:hover {
   opacity: 70%;
 }
 
 /* фокусирование через таб */
-.Sedona-logo:focus {
-  opacity: 70%; /* не работает */
+.Sedona-logo-link:focus {
+  opacity: 70%;
 }
 
 /* нажатие */
-.Sedona-logo:active {
+.Sedona-logo-link:active {
   opacity: 30%;
 }
 
@@ -252,9 +252,19 @@ img {
   color: #756157;
 }
 
-/* фокусирование через таб */
+/* наведение курсора, иконки */
+.navigation-link:hover .navigation-icon {
+  fill: #756157;
+}
+
+/* фокус */
 .navigation-link:focus {
   color: #756157;
+}
+
+/* фокус для иконок в навигации */
+.navigation-link:focus .navigation-icon {
+  fill: #756157;
 }
 
 /* нажатие */
@@ -263,7 +273,13 @@ img {
   opacity: 30%;
 }
 
-/* выделение текущего раздела навигации */
+/* нажатие для иконок в навигации */
+.navigation-link:active .navigation-icon {
+  fill: #7561574D;
+  opacity: 30%;
+}
+
+/* выделение текущего раздела навигации, полоска снизу */
 .navigation-link-current::before {
   position: absolute;
   content: "";
@@ -704,17 +720,17 @@ img {
 }
 
 /* наведение курсора */
-.footer-social-icon:hover {
+.footer-social-button:hover .footer-social-icon {
   fill: #68A2CA;
 }
 
 /* фокусирование через таб */
-.footer-social-icon:focus {
-  fill: #68A2CA; /* не работает, обернуть в ссылку? */
+.footer-social-button:focus .footer-social-icon {
+  fill: #68A2CA;
 }
 
 /* нажатие */
-.footer-social-icon:active {
+.footer-social-button:active .footer-social-icon{
   fill: #68A2CA4D;
   opacity: 30%;
 }
@@ -746,18 +762,16 @@ img {
 
 /* контейнер с ссылкой на разработчика сайта */
 .htmlacademy-link-container {
-  position: relative;
   flex-basis: 33.3333%;
+}
+
+.htmlacademy-link {
+  display: flex;
+  justify-content: end;
 }
 
 /* позиционируем иконку академии в контейнере */
 .htmlacademy-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto 0 auto auto;
   fill: #000000;
 }
 
@@ -766,8 +780,8 @@ img {
   fill: #756157;
 }
 
-/* фокусирование через таб */
-.htmlacademy-icon:focus {
+/* фокус */
+.htmlacademy-link-container:focus .htmlacademy-icon{
   fill: #756157; /* не работает и нет рамки браузера */
 }
 
@@ -789,9 +803,9 @@ img {
 }
 
 /*скрыть модальное окно */
-/* .modal-container-close {
+.modal-container-close {
    display: none;
-} */
+}
 
 /* центрируем окно, красим фон и указываем отступы */
 .modal {
@@ -859,7 +873,7 @@ img {
   align-self: center;
 }
 
-/* стилизация полей ввода */
+/* стилизация полей ввода модального окна*/
 .modal-field {
   padding: 15px 20px;
   background-color: #F2F2F2;
@@ -876,15 +890,25 @@ img {
   background-color: #E6E6E6;
 }
 
-/* фокусирование через таб */
+/* фокусирование, без ввода данных */
 .modal-field:focus {
-  background-color: white;
+  background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
 }
 
-/* нажатие */
-.modal-field:active {
+/* стилизация после ввода данных и снятия фокуса */
+.modal-field:not(:placeholder-shown) {
+  background-color: #F2F2F2;
+}
+
+/* наведение курсора после ввода данных */
+.modal-field:hover:not(:placeholder-shown) {
   background-color: #E6E6E6;
+}
+
+/* фокус с вводёнными данными */
+.modal-field:focus:not(:placeholder-shown) {
+  background-color: #ffffff;
   outline: 2px solid #000000;
 }
 
