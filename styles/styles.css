@@ -31,6 +31,11 @@
   font-display: swap;
 }
 
+/* плавная прокрутка к разделу о Седоне */
+html {
+  scroll-behavior: smooth;
+}
+
 /* внутренние отступы и границы теперь часть бокса */
 *,
 *::before,
@@ -90,11 +95,13 @@ img {
 /* наведение курсора */
 .button:hover {
   background-color: #615048;
+  transition: 0.5s;
 }
 
 /* фокусирование через таб */
 .button:focus {
   background-color: #615048;
+  transition: 0.5s;
 }
 
 /* нажатие */
@@ -102,20 +109,17 @@ img {
   color: rgba(255, 255, 255, 0.3);
 }
 
-/* неактивно */
-.button:disabled {
-  background-color: #E5E5E5;
-}
-
 /*кнопка 2-го типа, синяя */
 /* наведение курсора */
 .button-2:hover {
   background-color: #68A2CA;
+  transition: 0.5s;
 }
 
 /* фокусирование через таб */
 .button-2:focus {
   background-color: #68A2CA;
+  transition: 0.5s;
 }
 
 /* нажатие */
@@ -132,11 +136,13 @@ img {
 /* наведение курсора */
 .button-3:hover {
   background-color: #6C9E42;
+  transition: 0.5s;
 }
 
 /* фокусирование через таб */
 .button-3:focus {
   background-color: #6C9E42;
+  transition: 0.5s;
 }
 
 /* нажатие */
@@ -153,11 +159,13 @@ img {
 /* наведение курсора */
 .button-4:hover {
   background-color: transparent;
+  transition: 0.5s;
 }
 
 /* фокусирование через таб */
 .button-4:focus {
   background-color: transparent;
+  transition: 0.5s;
 }
 
 /* нажатие */
@@ -210,11 +218,13 @@ img {
 /* наведение курсора */
 .Sedona-logo-link:hover {
   opacity: 70%;
+  transition: 0.5s;
 }
 
 /* фокусирование через таб */
 .Sedona-logo-link:focus {
   opacity: 70%;
+  transition: 0.5s;
 }
 
 /* нажатие */
@@ -250,21 +260,25 @@ img {
 /* наведение курсора */
 .navigation-link:hover {
   color: #756157;
+  transition: 0.5s;
 }
 
 /* наведение курсора, иконки */
 .navigation-link:hover .navigation-icon {
   fill: #756157;
+  transition: 0.5s;
 }
 
 /* фокус */
 .navigation-link:focus {
   color: #756157;
+  transition: 0.5s;
 }
 
 /* фокус для иконок в навигации */
 .navigation-link:focus .navigation-icon {
   fill: #756157;
+  transition: 0.5s;
 }
 
 /* нажатие */
@@ -316,22 +330,6 @@ img {
   left: 0;
   margin: auto;
   fill: #000000;
-}
-
-/* наведение курсора */
-.navigation-icon:hover {
-  fill: #756157;
-}
-
-/* фокусирование через таб */
-.navigation-icon:focus {
-  fill: #756157; /* не работает */
-}
-
-/* нажатие */
-.navigation-icon:active {
-  fill: #7561574D;
-  opacity: 30%;
 }
 
 /* для псевдоэлемента счётчика избранного, может лишний, есть ли способ избавиться? */
@@ -663,6 +661,46 @@ img {
   color: rgba(0, 0, 0, 0.6)
 }
 
+/* наведение курсора */
+.newsletter-field:hover {
+  background-color: #E6E6E6;
+  transition: 0.5s;
+}
+
+/* фокусирование, без ввода данных */
+.newsletter-field:focus {
+  background-color: #E6E6E6;
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  transition: 0.5s;
+}
+
+/* стилизация после ввода данных и снятия фокуса */
+.newsletter-field:not(:placeholder-shown) {
+  background-color: #F2F2F2;
+  transition: 0.5s;
+}
+
+/* наведение курсора после ввода данных */
+.newsletter-field:hover:not(:placeholder-shown) {
+  background-color: #E6E6E6;
+  transition: 0.5s;
+}
+
+/* фокус с введёнными данными */
+.newsletter-field:focus:not(:placeholder-shown) {
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 2px black;
+  transition: 0.5s;
+}
+
+/* выключено */
+.newsletter-field:disabled {
+  background-color: white;
+  box-shadow: inset 0 0 0 2px black;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 /* кнопка подписки на рассылку */
 .newsletter-button {
   background-color: #82B3D3;
@@ -722,11 +760,13 @@ img {
 /* наведение курсора */
 .footer-social-button:hover .footer-social-icon {
   fill: #68A2CA;
+  transition: 0.5s;
 }
 
 /* фокусирование через таб */
 .footer-social-button:focus .footer-social-icon {
   fill: #68A2CA;
+  transition: 0.5s;
 }
 
 /* нажатие */
@@ -735,23 +775,28 @@ img {
   opacity: 30%;
 }
 
+.footer-phone-container {
+  flex-basis: 33.3333%;
+}
+
 /* номер телефона */
 .footer-phone {
   text-decoration: none;
   color: black;
   font-size: 40px;
   line-height: 40px;
-  flex-basis: 33.3333%;
 }
 
 /* наведение курсора */
 .footer-phone:hover {
   color: #756157;
+  transition: 0.5s;
 }
 
 /* фокусирование через таб */
 .footer-phone:focus {
   color: #756157;
+  transition: 0.5s;
 }
 
 /* нажатие */
@@ -763,11 +808,14 @@ img {
 /* контейнер с ссылкой на разработчика сайта */
 .htmlacademy-link-container {
   flex-basis: 33.3333%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
 }
 
 .htmlacademy-link {
-  display: flex;
-  justify-content: end;
+  display: inline-block;
 }
 
 /* позиционируем иконку академии в контейнере */
@@ -778,11 +826,13 @@ img {
 /* наведение курсора */
 .htmlacademy-icon:hover {
   fill: #756157;
+  transition: 0.5s;
 }
 
 /* фокус */
-.htmlacademy-link-container:focus .htmlacademy-icon{
-  fill: #756157; /* не работает и нет рамки браузера */
+.htmlacademy-link:focus .htmlacademy-icon {
+  fill: #756157;
+  transition: 0.5s;
 }
 
 /* нажатие */
@@ -888,28 +938,53 @@ img {
 /* наведение курсора */
 .modal-field:hover {
   background-color: #E6E6E6;
+  transition: 0.5s;
 }
 
 /* фокусирование, без ввода данных */
 .modal-field:focus {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
+  transition: 0.5s;
 }
 
 /* стилизация после ввода данных и снятия фокуса */
 .modal-field:not(:placeholder-shown) {
   background-color: #F2F2F2;
+  transition: 0.5s;
 }
 
 /* наведение курсора после ввода данных */
 .modal-field:hover:not(:placeholder-shown) {
   background-color: #E6E6E6;
+  transition: 0.5s;
 }
 
 /* фокус с вводёнными данными */
 .modal-field:focus:not(:placeholder-shown) {
   background-color: #ffffff;
   outline: 2px solid #000000;
+  transition: 0.5s;
+}
+
+/* выключено */
+.modal-field:disabled {
+  background-color: white;
+  box-shadow: inset 0 0 0 2px black;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* выключяем кнопку календаря и "-" */
+.modal-field:disabled + .button-icon {
+  opacity: 0,3;
+  pointer-events: none;
+}
+
+/* выключяем кнопку "+" */
+.modal-field:disabled + .button-icon + .button-icon {
+  opacity: 0,3;
+  pointer-events: none;
 }
 
 /* стилизация плейсхолдеров для input */
@@ -933,22 +1008,24 @@ img {
 /* наведение курсора */
 .modal-button:hover {
   background-color: #68A2CA;
+  transition: 0.5s;
 }
 
 /* фокусирование через таб */
 .modal-button:focus {
   background-color: #68A2CA;
   outline: 3px solid #756257;
+  transition: 0.5s;
 }
 
 /* нажатие */
 .modal-button:active .modal-button-text {
   opacity: 30%;
+  transition: 0.2s;
 }
 
 .field-adults, .field-kids {
   text-align: center;
-  /* padding: 15px 62px; */
 }
 
 /* кнопка закрыть модальное окно */
@@ -971,12 +1048,14 @@ img {
 /* наведение курсора */
 .modal-close-button:hover {
   background-color: #E6E6E6;
+  transition: 0.5s;
 }
 
 /* фокусирование через таб */
 .modal-close-button:focus {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
+  transition: 0.5s;
 }
 
 /* нажатие */
@@ -1013,22 +1092,26 @@ img {
 /* наведение курсора */
 .button-icon:hover .modal-icon {
   fill: black;
+  transition: 0.5s;
 }
 
 /* фокусирование через таб */
 .button-icon:focus .modal-icon {
   fill: black;
+  transition: 0.5s;
 }
 
 /* фокусирование через таб */
 .button-icon:focus{
-  fill: black;
   outline: 3px solid #83B3D3;
+  border-radius: 4px;
+  transition: 0.5s;
 }
 
 /* нажатие */
 .button-icon:active .modal-icon {
-  fill:rgba(0, 0, 0, 0.2)
+  fill:rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
 }
 
 /*кнопка календаря, окно заезда */
@@ -1159,11 +1242,20 @@ img {
   height: 100%;
   color: #83B3D3;
   display: block;
+
 }
 
 /* наведение */
 .tooltip-toggle:hover .tooltip-icon {
   color: #68A2CA;
+  transition: 0.5s;
+}
+
+/* фокусирование */
+.tooltip-toggle:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+  transition: 0.5s;
 }
 
 /* текст тултипа */
@@ -1197,7 +1289,7 @@ img {
   margin: 0 auto;
 }
 
-/* наведение и фокус */
+/* показываем тултип при наведении и фокусе */
 .tooltip-toggle:hover + .tooltip-text, .tooltip-toggle:focus + .tooltip-text {
   display: block;
 }
@@ -1264,11 +1356,13 @@ img {
 /* наведение курсора */
 .breadcrumbs-link:hover {
   opacity: 60%;
+  transition: 0.5s;
 }
 
 /* фокусирование через таб */
 .breadcrumbs-link:focus {
   opacity: 60%;
+  transition: 0.5s;
 }
 
 /* нажатие */
@@ -1343,11 +1437,13 @@ img {
 /* наведение */
 .control:hover .control-mark {
  opacity: 60%;
+ transition: 0.5s;
 }
 
 /* фокус */
 .control-input:focus + .control-mark{
   outline: 3px solid #83B3D3;
+  transition: 0.5s;
 }
 
 /* нажатие */
@@ -1446,12 +1542,14 @@ img {
 /* наведение курсора */
 .catalog-filters-group-price input:hover {
   border: 2px solid rgba(255, 255, 255, 0.6);
+  transition: 0.5s;
 }
 
 /* фокусирование через таб */
 .catalog-filters-group-price input:focus {
   box-shadow: 0 0 0 3px #81B3D2,
         inset 0 0 0 3px #81B3D2;
+  transition: 0.5s;
 }
 
 /* нажатие */
@@ -1497,14 +1595,16 @@ img {
 }
 
 /* наведение курсора */
-/*.bar-toggle:hover {
-   opacity: 90%;
-} */
+.bar-toggle:hover {
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+}
 
 /* фокусирование через таб */
 .bar-toggle:focus {
   outline: 3px solid #83B3D3;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
 }
 
 /* нажатие */
@@ -1560,12 +1660,14 @@ img {
 /* наведение курсора */
 .button-filters-cancel:hover {
   opacity: 60%;
+  transition: 0.5s;
 }
 
 /* фокусирование через таб */
 .button-filters-cancel:focus {
   outline: 3px solid #83B3D3;
   border-radius: 4px;
+  transition: 0.5s;
 }
 
 /* нажатие */
@@ -1618,16 +1720,21 @@ img {
 /* наведение курсора */
 .select-control:hover {
   border: 2px solid #68A2CA;
+  transition: 0.5s;
 }
 
 /* фокусирование через таб */
 .select-control:focus {
   border: 2px solid #68A2CA;
+  outline: none;
+  transition: 0.5s;
 }
 
 /* нажатие */
-.select-control:active {
-  border: 2px solid #3F5E72; /* не работает */
+.select-control:focus-visible {
+  border: 2px solid #3F5E72;
+  outline: none;
+  transition: 0.5s;
 }
 
 /* выключенный */
@@ -1652,11 +1759,13 @@ img {
 /* Ннведение */
 .button-sorting:hover {
   border-color: black;
+  transition: 0.5s;
 }
 
 /* фокус */
 .button-sorting:focus {
   border-color: #68A2CA;
+  transition: 0.5s;
 }
 
 /* нажатие */
@@ -1707,11 +1816,13 @@ img {
 /* наведение курсора */
 .hotel-card-link:hover {
   color: #756157;
+  transition: 0.5s;
 }
 
 /* фокусирование через таб */
 .hotel-card-link:focus {
   color: #756157;
+  transition: 0.5s;
 }
 
 /* нажатие */
@@ -1884,16 +1995,19 @@ img {
 /* наведение курсора */
 .hotels-per-page-number:hover {
   border: 2px solid #68A2CA;
+  transition: 0.5s;
 }
 
 /* фокусирование через таб */
 .hotels-per-page-number:focus {
-  border: 2px solid #68A2CA;
+  border: 2px solid #68A2CA;  /* не работает */
+  transition: 0.5s;
 }
 
 /* нажатие */
-.hotels-per-page-number:active {
-  border: 2px solid #3F5E72; /* не работает */
+.hotels-per-page-number:focus-visible {
+  border: 2px solid #3F5E72;
+  outline: none;
 }
 
 /* выключенный */
