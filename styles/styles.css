@@ -193,7 +193,7 @@ img {
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
-/* поместил заголовок в контейнер */
+/* отступы заголовка */
 .page-header {
   padding: 0 70px;
 }
@@ -202,12 +202,12 @@ img {
 .navigation {
   display: flex;
   justify-content: space-between;
-  height: 65px;
 }
 
 /* отступ между лого и навигацией */
 .Sedona-logo-link {
   margin-right: 30px;
+  margin-bottom: -10px;
 }
 
 /* размещаем лого поверх фона */
@@ -299,7 +299,7 @@ img {
   content: "";
   right: 18px;
   left: 18px;
-  bottom: 0;
+  bottom: -3px;
   background-color: #756257;
   height: 2px;
 }
@@ -361,38 +361,24 @@ img {
 /* размеры кнопки справа и отступ от иконок меню пользователя */
 .navigation-user-button {
   width: 160px;
-  height: 37px;
   margin-left: 20px;
+  padding: 9px 15px;
 }
 
 /* фоновое фото каньона */
 .Sedona-wellcome-block {
-  background-image: url(../images/index/wellcome-background.jpg);
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 485px;
-  /* добавить черный фон? */
+  background-image: url(../images/index/wellcome-background-mask.svg), url(../images/index/wellcome-background.jpg);
+  background-size: auto, contain;
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom, top;
+  padding-top: 51px;
+  padding-bottom: 82px;
 }
 
 /* надпись на фото с каньоном */
 .wellcome-logo {
   display: block;
   margin: 0 auto;
-  padding-top: 51px;
-  padding-bottom: 82px;
-  height: 485px;
-}
-
-/* белая маска на фото каньона */
-.background-mask {
-  position: relative;
-  bottom: 57px;
-  background-image: url(../images/index/wellcome-background-mask.svg);
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 57px;
 }
 
 /* контейнер для слогана */
@@ -440,8 +426,8 @@ img {
 .advantages-card-1 {
   background-color: #82B3D3;
   color: white;
-  width: 400px;
-  height: 384px;
+  max-width: 400px;
+  max-height: 384px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -454,15 +440,18 @@ img {
 /* 1-я карточка во 2 ряду, жильё */
 .advantages-card-1-1 {
   background-color: #83B3D31F;
-  width: 400px;
-  height: 384px; /* 224 */
+  max-width: 400px;
+  max-height: 384px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 80px 85px;
+  padding: 182px 85px 80px;
   margin: 0;
   text-align: center;
   align-items: center;
+  background-image: url("../images/index/advantages-card-home.svg");
+  background-repeat: no-repeat;
+  background-position: top 80px center;
 }
 
 /* 2-я карточка во 2 ряду, еда */
@@ -473,10 +462,13 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 80px 85px;
+  padding: 182px 85px 80px;
   margin: 0;
   text-align: center;
   align-items: center;
+  background-image: url("../images/index/advantages-card-food.svg");
+  background-repeat: no-repeat;
+  background-position: top 80px center;
 }
 
 /* 3-я карточка во 2 ряду, сувениры */
@@ -487,10 +479,13 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 80px 85px;
+  padding: 182px 85px 80px;
   margin: 0;
   text-align: center;
   align-items: center;
+  background-image: url("../images/index/advantages-card-souvenirs.svg");
+  background-repeat: no-repeat;
+  background-position: top 78px center;
 }
 
 /* карточка преимуществ №2 */
