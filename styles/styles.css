@@ -316,7 +316,7 @@ img {
 
 /* элемент навигации справа */
 .navigation-user .navigation-link {
-  min-width: 42px;
+  min-width: 44px;
   min-height: 66px;
   padding: 18px 0;
 }
@@ -370,7 +370,7 @@ img {
   background-image: url(../images/index/wellcome-background-mask.svg), url(../images/index/wellcome-background.jpg);
   background-size: auto, contain;
   background-repeat: no-repeat, no-repeat;
-  background-position: bottom, top;
+  background-position: bottom, 0 calc(100% - 1px);
   padding-top: 51px;
   padding-bottom: 82px;
 }
@@ -426,8 +426,7 @@ img {
 .advantages-card-1 {
   background-color: #82B3D3;
   color: white;
-  max-width: 400px;
-  max-height: 384px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -440,8 +439,7 @@ img {
 /* 1-я карточка во 2 ряду, жильё */
 .advantages-card-1-1 {
   background-color: #83B3D31F;
-  max-width: 400px;
-  max-height: 384px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -457,8 +455,7 @@ img {
 /* 2-я карточка во 2 ряду, еда */
 .advantages-card-1-2 {
   background-color: #FFFFFF;
-  max-width: 400px;
-  height: 384px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -475,7 +472,6 @@ img {
 .advantages-card-1-3 {
   background-color: #83B3D31F;
   width: 400px;
-  height: 384px; /* 224 */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -492,8 +488,7 @@ img {
 .advantages-card-2 {
   background-color: #82B3D3;
   color: white;
-  max-width: 400px;
-  max-height: 384px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -507,7 +502,6 @@ img {
 .advantages-card-3 {
   background-color: rgba(131, 179, 211, 0.12);
   width: 400px;
-  height: 384px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -521,7 +515,6 @@ img {
 .advantages-card-4 {
   background-color: rgba(131, 179, 211, 0.2);
   width: 400px;
-  height: 384px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -535,7 +528,6 @@ img {
 .advantages-card-5 {
   background-color: rgba(131, 179, 211, 0.12);
   width: 400px;
-  height: 384px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -600,9 +592,9 @@ img {
 /* размеры и позиционирование кнопки с поиском отелей */
 .search-hotels-button {
   width: 574px;
-  height: 60px;
   font-size: 20px;
   line-height: 36px;
+  padding: 12px 15px;
   margin: 56px auto 0 auto;
 }
 
@@ -647,12 +639,11 @@ img {
   background-color: #F2F2F2;
   border-radius: 10px 0px 0px 10px;
   width: 600px;
-  height: 60px;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
   border: inherit;
-  padding: 0 22px;
+  padding: 20px 22px;
   color: rgba(0, 0, 0, 0.6)
 }
 
@@ -701,10 +692,9 @@ img {
   background-color: #82B3D3;
   border-radius: 0px 10px 10px 0px;
   width: 200px;
-  height: 60px;
   font-size: 20px;
   line-height: 36px;
-  padding: 0;
+  padding: 12px 15px;
 }
 
 /* раздел рассылки на странице каталога, на белом фоне, без фото */
@@ -1272,7 +1262,7 @@ img {
   display: none;
 }
 
-/* стрелка тултипа */
+/* стрелка тултипа, черный треугольник */
 .tooltip-text:after {
   content: "";
   background-image: url("../images/icons/icon-tooltip-arrow.svg");
@@ -1303,7 +1293,6 @@ img {
   background-repeat: no-repeat;
   color: white;
   padding: 35px 70px 70px 70px;
-  min-height: 404px;
 }
 
 /* заголовок раздела фильтры */
@@ -1632,9 +1621,8 @@ img {
 /* кнопка применить в разделе фильтров */
 .button-filters-apply {
   width: 160px;
-  height: 44px;
   background-color: #82B3D3;
-  padding: 0;
+  padding: 14px 15px;
 }
 
 /* кнопка сбросить в разделе фильтров*/
@@ -1686,7 +1674,6 @@ img {
   display: block;
   align-self: center;
   width: 338px;
-  height: 37px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -1744,11 +1731,11 @@ img {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 50px;
-  height: 50px;
+  /* width: 50px; */
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   align-self: center;
+  padding: 17px 16px;
 }
 
 /* Ннведение */
@@ -1798,7 +1785,6 @@ img {
 /* размеры карточки с внутренними отступами */
 .hotel-card {
   width: 340px;
-  height: 438px;
   padding: 20px;
   }
 
@@ -1863,13 +1849,13 @@ img {
 /* кнопка подробнее */
 .hotel-details {
   width: 140px;
-  height: 37px;
+  padding: 8px 15px;
 }
 
 /* кнопка в избранное */
 .hotel-favourites {
   width: 140px;
-  height: 37px;
+  padding: 8px 15px;
   background-color: #82B3D3;
 }
 
@@ -1888,7 +1874,7 @@ img {
 /* численный рейтинг отеля */
 .hotel-rating {
   width: 140px;
-  height: 37px;
+  padding: 8px 15px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -1917,8 +1903,6 @@ img {
 
 /* кнопка пагинации */
 .pagination-item {
-  width: 55px;
-  height: 55px;
   background-color: #82B3D3;
   border-radius: 4px;
   margin-right: 8px;
@@ -1936,8 +1920,8 @@ img {
 .pagination-link {
   text-decoration: none;
   color: white;
-  width: 55px;
-  height: 55px;
+  min-width: 60px;
+  padding: 12px 18px;
   display: flex;
   align-items: center;
   justify-content: center;
