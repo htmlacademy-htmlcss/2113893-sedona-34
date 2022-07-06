@@ -213,6 +213,8 @@ img {
 .Sedona-logo-link {
   margin-right: 30px;
   margin-bottom: -13px;
+  min-height: 70px;
+  min-width: 139px;
 }
 
 /* размещаем лого поверх фона */
@@ -313,6 +315,7 @@ img {
 .navigation-user {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -432,6 +435,7 @@ img {
   background-color: #82B3D3;
   color: white;
   width: 400px;
+  min-height: 384px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -446,6 +450,7 @@ img {
 .advantages-card-1-1 {
   background-color: #83B3D31F;
   width: 400px;
+  min-height: 384px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -703,7 +708,8 @@ img {
 .newsletter-button {
   background-color: #82B3D3;
   border-radius: 0px 10px 10px 0px;
-  width: 200px;
+  min-width: 200px;
+  max-width: 600px;
   font-size: 20px;
   line-height: 36px;
   padding: 12px 15px;
@@ -730,7 +736,7 @@ img {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  flex-basis: 36%;
+  flex-basis: 38%;
 }
 
 /* отступы для кнопок соц сетей */
@@ -777,6 +783,8 @@ img {
   color: black;
   font-size: 40px;
   line-height: 40px;
+  display: block;
+  text-align: center;
 }
 
 /* наведение курсора */
@@ -1302,6 +1310,7 @@ img {
   background-repeat: no-repeat;
   color: white;
   padding: 35px 70px 70px 70px;
+  background-color: #000000;
 }
 
 /* заголовок раздела фильтры */
@@ -1911,6 +1920,7 @@ img {
 /* упорядочиваем кнопки пагинации в ряд */
 .pagination-list {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
   list-style-type: none;
