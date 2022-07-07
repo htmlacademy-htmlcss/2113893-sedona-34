@@ -757,7 +757,7 @@ img {
 }
 
 .footer-phone-container {
-  flex-basis: 32%;
+  flex-basis: 34%;
 }
 
 /* номер телефона */
@@ -796,7 +796,7 @@ img {
 
 /* контейнер с ссылкой на разработчика сайта */
 .htmlacademy-link-container {
-  flex-basis: 32%;
+  flex-basis: 30%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
