@@ -158,7 +158,7 @@ img {
 
 /* контейнер страницы */
 .border-container {
-  min-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
 }
@@ -291,12 +291,13 @@ img {
 /* меню пользователя и кнопка (справа) */
 .navigation-user {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  min-width: 270px;
 }
 
 /* элемент навигации справа */
@@ -355,9 +356,10 @@ img {
   background-image: url(../images/index/wellcome-background-mask.svg), url(../images/index/wellcome-background.jpg);
   background-size: auto, contain;
   background-repeat: no-repeat, no-repeat;
-  background-position: bottom, 0 calc(100% - 1px);
+  background-position: 0 calc(100% + 1px), 0 calc(100% - 2px);
   padding-top: 51px;
   padding-bottom: 82px;
+  background-color: #314D59;
 }
 
 /* надпись на фото с каньоном */
@@ -382,6 +384,7 @@ img {
   margin: 0;
 }
 
+/* центрируем блок с карточками преимуществ */
 .advantages {
   margin: 0 auto;
 }
@@ -596,13 +599,13 @@ img {
 .newsletter {
   margin: 0 auto;
   text-align: center;
-  padding: 94px 0;
+  padding: 94px 5px;
   background-image: url(../images/index/newsletter-background.jpg);
   color: white;
-  background-color: #000000;
-  background-size: auto 100%;
+  background-color: #314D59;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
 /* заголовок раздела рассылки */
@@ -713,7 +716,7 @@ img {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  flex-basis: 38%;
+  flex-basis: 33%;
 }
 
 /* отступы для кнопок соц сетей */
@@ -756,8 +759,9 @@ img {
   pointer-events: none;
 }
 
+/* резервируем место под номер телефона */
 .footer-phone-container {
-  flex-basis: 34%;
+  flex-basis: 37%;
 }
 
 /* номер телефона */
@@ -801,10 +805,6 @@ img {
   align-items: center;
   justify-content: flex-end;
   text-align: center;
-}
-
-.htmlacademy-link {
-  display: inline-block;
 }
 
 /* позиционируем иконку академии в контейнере */
@@ -866,6 +866,7 @@ img {
   border-radius: 30px;
 }
 
+/* мадальное окно через grid-area */
 .modal-form {
   position: relative;
   display: grid;
@@ -991,6 +992,7 @@ img {
   color:#000000;
 }
 
+/* центририруем количество гостей */
 .field-adults, .field-kids {
   text-align: center;
 }
@@ -1320,10 +1322,11 @@ img {
 .catalog-header {
   background-image: url(../images/catalog/catalog-background.jpg);
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   color: white;
   padding: 35px 70px 70px 70px;
-  background-color: #000000;
+  background-color: #314D59;
 }
 
 /* заголовок раздела фильтры */
@@ -1409,11 +1412,12 @@ img {
   align-items: flex-end;
 }
 
-/* убираем маркеры и отступы списков в разделе фильтров */
+/* убираем маркеры и отступы списков в разделе фильтров, ограничиваем ширину секции с фильтрами */
 .catalog-filters-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  max-width: 270px;
 }
 
 /* заголовки фильтров */
@@ -1427,14 +1431,9 @@ img {
   align-items: flex-end;
 }
 
-/* отступы между элементами инфраструктуры и типом жилья */
+/* отступы между элементами списков инфраструктуры и типом жилья */
 .catalog-filters-item:not(:last-child) {
   margin-bottom: 15px;
-}
-
-/* отступ между инфраструктурой и типом жилья */
-.catalog-filters-group-infrastructure {
-  margin-right: 72px;
 }
 
 /* делаем отступы под кастомные чек-боксы и радиокнопки */
@@ -1453,6 +1452,14 @@ img {
   border-radius: 4px;
   background-color: white;
   line-height: 23px;
+}
+
+/* направляем подписи по флексу и делаем отступ от кнопок через ширину */
+.control-label {
+  max-width: 220px;
+  min-width: 180px;
+  display: inline-flex;
+  flex-wrap: wrap;
 }
 
 /* наведение */
@@ -1521,7 +1528,7 @@ img {
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, max-content);
-  margin-top: 4px;
+  /* margin-top: 4px; */
 }
 
 /* "от" в поле ввода минимальной цены */
@@ -1599,6 +1606,7 @@ img {
   border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
+/* выключенный (пимпа) */
 .toggle-min.disable,
 .toggle-max.disable {
   background-color: gray;
@@ -1617,6 +1625,7 @@ img {
   position: relative;
   height: 4px;
   margin-top: 28px;
+  margin-bottom: 10px;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   align-self: start;
@@ -1740,7 +1749,7 @@ img {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  margin-right: auto; /* справа 191, но мешает отображению в 1 строку, разобраться с отступами, nowrap?*/
+  margin-right: auto;
 }
 
 /* сортировка найденных гостиниц */
