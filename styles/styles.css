@@ -291,7 +291,7 @@ img {
 /* меню пользователя и кнопка (справа) */
 .navigation-user {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   align-items: center;
   margin: 0;
