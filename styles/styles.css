@@ -716,7 +716,7 @@ img {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  flex-basis: 38%;
+  flex-basis: 33%;
 }
 
 /* отступы для кнопок соц сетей */
@@ -761,7 +761,7 @@ img {
 
 /* резервируем место под номер телефона */
 .footer-phone-container {
-  flex-basis: 34%;
+  flex-basis: 37%;
 }
 
 /* номер телефона */
@@ -805,11 +805,6 @@ img {
   align-items: center;
   justify-content: flex-end;
   text-align: center;
-}
-
-/* удалить
-.htmlacademy-link {
-  display: inline-block;
 }
 
 /* позиционируем иконку академии в контейнере */
